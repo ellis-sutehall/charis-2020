@@ -1,0 +1,66 @@
+{
+  "name": "underscores",
+  "version": "1.0.0",
+  "description": "Hi. I'm a starter theme called _s, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.",
+  "author": "Automattic Theme Team",
+  "license": "GPL-2.0-or-later",
+  "main": "gulpfile.js",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "homepage": "https://github.com/Automattic/_s#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Automattic/_s.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Automattic/_s/issues"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@wordpress/scripts": "^7.2.0",
+    "gulp-imagemin": "^2.4.0",
+    "rtlcss": "^2.5.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "compile:css": "node-sass sass/style.scss style.css && node-sass sass/woocommerce.scss woocommerce.css && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.6",
+    "bulma": "^0.8.2",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^0.2.8",
+    "gulp-concat": "^2.5.2",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^1.2.0",
+    "node-sass": "^4.13.1"
+  }
+}

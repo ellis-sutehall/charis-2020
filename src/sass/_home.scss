@@ -1,0 +1,41 @@
+.hero {
+    background-image: url(../img/charis-sutehall-jewellery-hero-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    &.is-fullheight {
+        min-height: calc(100vh - #{$header-height-lrg});
+    }
+    // .title {
+    //     &.is-4 {
+    //         font-weight: normal;
+    //     }
+    // }
+}
+
+.latest-products {
+    padding-bottom: $size-1;
+    h2 {
+        padding: $size-1 0 $size-6 0;
+    }
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+    background-image: url('../img/cta-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.featured {
+    .product-link {
+        padding: $size-6 0;
+        display: block;
+    }
+    .is-5 {
+        font-style: italic;
+    }
+}

@@ -1,0 +1,39 @@
+.woocommerce-pagination {
+    text-align: center;
+    ul.page-numbers {
+        display: inline;
+        li {
+            padding: 0;
+            display: inline;
+            .page-numbers {
+                width: 20px;
+                height: 20px;
+                padding: 10px 15px;
+                &.current {
+                    background: aliceblue;
+                }
+                &.prev, &.next {
+                    position: relative;
+                    @extend %fa-icon;
+                    @extend .fas;
+                    padding-right: 30px;
+                    &:before {
+                        content: fa-content($fa-var-arrow-left);
+                        display: block;
+                        position: absolute;
+                        top: 6px;
+                    }
+                }
+                &.next {
+                    padding-left: 20px;
+                    &:before {
+                        content: fa-content($fa-var-arrow-right);
+                    }
+                }
+            }
+            span {
+                // display: block;
+            }
+        }
+    }
+}

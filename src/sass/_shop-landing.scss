@@ -1,0 +1,80 @@
+.widget-filters {
+    .widget_product_categories {
+        .dropdown_product_cat {
+            @include input-class;
+        }
+    }
+}
+
+// .shop-landing-wrap {
+.woocommerce-page {
+    .entry-content {
+        margin-top: $size-4;
+        p {
+            @include from($tablet) {
+            // width: 70%;
+            }
+        }
+    }
+    
+    &.woocommerce {
+        .woocommerce-result-count {
+            margin: $size-6 0;
+        }
+        .woocommerce-ordering {
+            margin-top: $size-6;
+            margin-bottom: $size-4;
+        }
+    }
+    ul.products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 45%);
+        justify-content: space-between;
+        margin-bottom: $size-2;
+        padding: 0 $size-6;
+        @include from($tablet) {
+            grid-template-columns: repeat(auto-fill, 23%);
+            padding: 0;
+        }
+        &::after {
+            content: "";
+            flex: auto;
+        }
+        li.product {
+            display: flex;
+            // flex-flow: wrap;
+            flex-direction: column;
+            // width: 45%;
+            text-align: center;
+            margin-bottom: $size-3;
+            flex-grow: 1;
+            @include from($tablet) {
+                // flex: 1 0 20%;
+                // margin-left: 2%;
+                &:nth-child(4n-7) {
+                    margin-left: 0;
+                }
+            }
+            .woocommerce-loop-product__title {
+                margin-bottom: .5rem;
+            }
+            .star-rating {
+                width: 90px;
+                position: relative;
+                margin: $size-6 auto $size-6 auto;
+            }
+            > a {
+                flex: 1 0 auto;
+                margin-bottom: $size-6;
+                img {
+                    // Create thumbnail in WP
+                    width: 336px;
+                }
+            }
+            .button {
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

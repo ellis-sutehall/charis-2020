@@ -1,0 +1,77 @@
+@mixin input-class {
+    box-shadow: inset 0 0.0625em 0.125em rgba(10,10,10,.05);
+    max-width: 100%;
+    width: 100%;
+
+    background-color: #fff;
+    border-color: #dbdbdb;
+    border-radius: 4px;
+    color: #363636;
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: 1rem;
+    height: 2.5em;
+    justify-content: flex-start;
+    line-height: 1.5;
+    padding: calc(.5em - 1px) calc(.75em - 1px);
+    position: relative;
+    vertical-align: top;
+}
+
+@mixin clearfix() {
+	*zoom: 1;
+
+	&::before,
+	&::after {
+		content: ' ';
+		display: table;
+	}
+
+	&::after {
+		clear: both;
+	}
+}
+
+@mixin iconbefore( $glyph: '\e001' ) {
+	font-family: 'WooCommerce';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin-right: 0.618em;
+	content: $glyph;
+	text-decoration: none;
+}
+
+@mixin iconbeforedashicons( $glyph: '\f333' ) {
+	font-family: 'Dashicons';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	content: $glyph;
+	text-decoration: none;
+}
+
+@mixin iconafter( $glyph: '\e001' ) {
+	font-family: 'WooCommerce';
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	margin-left: 0.618em;
+	content: $glyph;
+	text-decoration: none;
+}
