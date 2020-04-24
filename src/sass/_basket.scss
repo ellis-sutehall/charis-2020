@@ -1,0 +1,181 @@
+.woocommerce-cart {
+    .site-content {
+        margin-top: 10rem;
+    }
+    h1 {
+        // text-align: center;
+        @include from($tablet) {
+            width: 66.66666%;
+        }
+        margin-bottom: $size-2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+	table.shop_table_responsive {
+		thead {
+			display: none;
+		}
+
+		tbody {
+			tr:first-child {
+				td:first-child {
+					border-top: 0;
+				}
+			}
+
+			th {
+				display: none;
+			}
+		}
+
+		tr {
+			display: block;
+
+			td {
+				display: block;
+				text-align: right !important; // Important to overwrite order status inline styling
+
+				&.order-actions {
+                    text-align: left !important; // This must always align left on handheld
+				}
+
+				&::before {
+					content: attr(data-title) ': ';
+					font-weight: 700;
+					float: left;
+				}
+                &.product-remove {
+                    text-align: left!important;
+                    a.remove {
+                        @extend %fa-icon;
+                        @extend .fas;
+                        text-indent: -1000000px;
+                        position: relative;
+                        &::before {
+                            content: fa-content($fa-var-times-circle);
+                            display: block;
+                            position: absolute;
+                            text-indent: 0;
+                            font-size: 1rem;
+                            top: -3px;
+                            color: $red;
+                        }
+                        &::after {
+                            content: "Remove Item";
+                            display: block;
+                            font-size: 1rem;
+                            color: black;
+                            position: absolute;
+                            top: -4px;
+                            text-indent: 0;
+                            right: -125px;
+                            width: 100px;
+                            font-family: BlinkMacSystemFont,-apple-system,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                
+                &.actions {
+                    .coupon {
+                        label {
+                            display: none;
+                        }
+                        .input-text {
+                            @include input-class;
+                            width: 40%;
+                        }
+                    }
+                }
+				&.product-remove,
+                &.actions,
+                &.product-thumbnail {
+                    img {
+                        width: 100px;
+                    }
+					&::before {
+						display: none;
+					}
+				}
+			}
+
+			&:nth-child( 2n ) {
+				td {
+					background-color: rgba(0, 0, 0, 0.025);
+				}
+			}
+		}
+    }
+
+    table.shop_table {
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		margin: $size-4 -1px 24px 0;
+        text-align: left;
+        width: 100%;
+		border-collapse: separate;
+        border-radius: 5px;
+        margin: 0 auto;
+        
+        @include from($tablet) {
+            width: 66.66666%;
+        }
+
+		th {
+			font-weight: 700;
+			padding: 9px 12px;
+			line-height: 1.5em;
+		}
+
+		td {
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+			padding: 9px 12px;
+			vertical-align: middle;
+			line-height: 1.5em;
+
+			small {
+				font-weight: normal;
+			}
+
+			del {
+				font-weight: normal;
+			}
+		}
+
+		tbody:first-child tr:first-child {
+
+			th,
+			td {
+				border-top: 0;
+			}
+		}
+
+		tfoot td,
+		tfoot th,
+		tbody th {
+			font-weight: 700;
+			border-top: 1px solid rgba(0, 0, 0, 0.1);
+		}
+    }
+    
+    .cart-collaterals {
+        width: 100%;
+        margin: $size-1 auto;
+        @include from($tablet) {
+            width: 66.66666%;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: $size-2;
+            font-weight: lighter;
+        }
+
+        .shop_table {
+            width: 100%;
+            margin-bottom: $size-1;
+        }
+    }
+
+}
+

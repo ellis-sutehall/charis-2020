@@ -1,0 +1,53 @@
+.woocommerce-checkout {
+    .woocommerce, h1 {
+        width: 66.66666%;
+        margin: 0 auto;
+    }
+    .woocommerce-form-login-toggle,
+    .woocommerce-form-coupon-toggle,
+    .woocommerce-notices-wrapper {
+        margin-bottom: $size-4;
+    }
+
+    .woocommerce-form-login-toggle,
+    .woocommerce-form-coupon-toggle {
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        padding: $size-4 0 $size-4 4rem;
+        position: relative;
+        font-size: 1.2rem;
+        line-height: 1.2em;
+        
+        &::before {
+            @extend %fa-icon;
+            @extend .fas;
+            content: fa-content($fa-var-user);
+            position: absolute;
+            top: 23px;
+            left: 20px;
+            font-size: 1.5rem;
+        }
+    }
+
+    .woocommerce-form-coupon-toggle {
+        &::before {
+            content: fa-content($fa-var-ticket-alt);
+            top: 25px;
+        }
+    }
+
+    .woocommerce-form-login,
+    .woocommerce-form-coupon {
+        padding: 0 $size-1 $size-4 $size-1;
+        p {
+            margin-bottom: $size-4;
+        }
+    }
+
+    .woocommerce-form-coupon {
+        input {
+            @include input-class;
+        }
+    }
+
+}
