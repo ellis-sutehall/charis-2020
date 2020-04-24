@@ -17,7 +17,7 @@
 		<div class="container">
 			<div class="columns">
 				<div class="column is-one-third">
-					<h2 class="title is-2">Join for my mailing list</h2>
+					<h2 class="title is-2">Join my mailing list</h2>
 					<p>Sign up today for <strong>Free Delivery</strong> on your first order and exclusive online only offers and news of upcoming products.</p>
 				</div>
 				<div class="column is-two-thirds">

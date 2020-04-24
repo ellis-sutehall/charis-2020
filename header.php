@@ -51,11 +51,11 @@
 				</div>
 				
 				<div class="icons-right">
-					<a href="/my-account">
+					<a class="my-account-icon" href="/my-account">
 						<span class="icon is-small" title="My Account"><i class="fas fa-user" aria-hidden-true></i></span>
 					</a>
-					<a href="/basket">
-						<span class="icon is-small" title="Basket"><i class="fas fa-shopping-basket" aria-hidden-true></i></span>
+					<a class="basket-icon" href="/basket">
+						<span class="basket icon is-small" title="Basket"><i class="fas fa-shopping-basket" aria-hidden-true></i></span>
 					</a>
 				</div>
 			</div>

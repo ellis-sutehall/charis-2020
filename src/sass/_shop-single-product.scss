@@ -1,5 +1,24 @@
 .single-product {
     padding-top: $size-4;
+
+    .woocommerce-notices-wrapper {
+        margin-bottom: $size-4;
+        .woocommerce-error, .woocommerce-message {
+            padding: $size-6;
+            background: $red;
+            color: white;
+            }
+            .woocommerce-error li, .woocommerce-message {
+                display: flex;
+                align-items: center;
+                .button {
+                    margin-right: $size-4;
+                }
+            }
+        .woocommerce-message {
+            background-color: $green;
+        }
+    }
     
     .woocommerce-product-gallery {
         position: relative;

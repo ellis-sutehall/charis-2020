@@ -329,3 +329,40 @@ function woocommerce_template_loop_product_title() {
 	echo '<h2 class="title is-5 woocommerce-loop-product__title">' . get_the_title() . '</h2>';
 }
 
+
+// Add count to Basket Icon in header
+function update_cart_icon_count( $fragments ) {
+	ob_start();
+	$count = WC()->cart->cart_contents_count;
+?>
+<a href="/?page_id=6" class="basket-icon">
+	<span class="icon is-small" title="Basket"><i class="fas fa-shopping-basket" aria-hidden-true></i>
+		 <!-- Basket Count -->
+		 <?php
+			 $count = WC()->cart->cart_contents_count;
+			 if ( $count > 0 ) {
+				 echo "<span class='basket-count'>{$count}</span>";
+			 }
+		 ?>
+	</span>
+</a>
+<?php
+ $fragments['span.basket'] = ob_get_clean();
+
+ return $fragments;
+}
+add_filter( 'woocommerce_add_to_cart_fragments', 'update_cart_icon_count' );
+
+
+// Remove styles for select forms (Effect Category Widget)
+function dequeue_stylesandscripts_select2() {
+	if ( class_exists( 'woocommerce' ) ) {
+		wp_dequeue_style( 'select2' );
+        wp_deregister_style( 'select2' );
+		
+        wp_dequeue_script( 'select2');
+        wp_deregister_script('select2');
+		
+    } 
+} 
+add_action( 'wp_print_scripts', 'dequeue_stylesandscripts_select2', 100 );

@@ -37,4 +37,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 		}
 		?>
 	</p>
-
+</div>

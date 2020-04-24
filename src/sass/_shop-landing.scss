@@ -1,7 +1,55 @@
+.shop-landing-wrap {
+    .container.select {
+        height: 80px;
+        width: 100%;
+        @include from($tablet) {
+            width: 23%;
+        }
+        &::after {
+            top: 45%;
+        }
+        .woocommerce-ordering {
+            select {
+                width: 100%;
+            }
+        }
+    }
+}
+
 .widget-filters {
-    .widget_product_categories {
+    margin-bottom: $size-2;
+    .widget-title {
+        margin-bottom: $size-6;
+        text-transform: uppercase;
+    }
+    .widget_price_filter {
+        .ui-slider {
+            margin-bottom: $size-6;
+            &.ui-slider-horizontal {
+                height: .1em;
+            }
+            .ui-slider-handle {
+                top: -7px;
+                background-color: white;
+                border: 2px solid grey;
+                transition: background-color .5s;
+                &:hover {
+                    background-color: grey;
+                }
+            }
+        }
+    }
+    .widget_product_categories.select {
+        height: 80px;
         .dropdown_product_cat {
-            @include input-class;
+            width: 100%;
+        }
+        .select2-container {
+            visibility: hidden;
+        }
+        &::after {
+            top: 90%;
+            right: 32px;
         }
     }
 }
