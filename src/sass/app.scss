@@ -31,7 +31,17 @@
   margin-bottom: $size-1 * 2;
 }
 
-section:not(.hero, .sign-up, .widget-filters) {
+.container {
+  padding: 0 $size-4;
+  
+  @include from($tablet) {
+    padding: 0;
+  }
+  
+}
+
+
+section:not(.hero, .sign-up, .widget-filters, .search-wrap) {
   margin-bottom: $size-1 *2;
 }
 

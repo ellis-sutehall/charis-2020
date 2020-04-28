@@ -24,26 +24,24 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'charis-2020' ); ?></a>
+	
+	<section class="search-wrap">
+		<div class="container">
+		<?php
+			if(is_active_sidebar('sidebar-2')){
+				dynamic_sidebar('sidebar-2');
+			}
+		?>
+		</div>
+	</section>
 
 	<header id="masthead" class="site-header">
 		<div class="container">
 			<div class="brand-wrap">
 				<div class="icons-left">
-					<a class="search" href="#" title="Search">
+					<a class="search-icon" href="#" title="Search">
 						<span class="icon is-small"><i class="fas fa-search" aria-hidden-true></i></span>
 					</a>
-					<div class="search-wrap">
-						<form action="">
-							<div class="field">
-								<div class="control">
-									<input class="input" type="text" placeholder="What are you looking for?">
-								</div>
-								<div class="control">
-									<button class="button input is-primary" type="submit" value="Search">Search</button>
-								</div>
-							</div>
-						</form>
-					</div>
 				</div>
 				
 				<div class="site-branding">
@@ -56,6 +54,9 @@
 					</a>
 					<a class="basket-icon" href="/basket">
 						<span class="basket icon is-small" title="Basket"><i class="fas fa-shopping-basket" aria-hidden-true></i></span>
+					</a>
+					<a class="count" href="/basket">
+						<span class='basket-count'>(0)</span>
 					</a>
 				</div>
 			</div>

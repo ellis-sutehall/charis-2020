@@ -334,20 +334,21 @@ function woocommerce_template_loop_product_title() {
 function update_cart_icon_count( $fragments ) {
 	ob_start();
 	$count = WC()->cart->cart_contents_count;
-?>
-<a href="/?page_id=6" class="basket-icon">
-	<span class="icon is-small" title="Basket"><i class="fas fa-shopping-basket" aria-hidden-true></i>
+?>	
+	<a class="count" href="/basket">
 		 <!-- Basket Count -->
 		 <?php
 			 $count = WC()->cart->cart_contents_count;
 			 if ( $count > 0 ) {
-				 echo "<span class='basket-count'>{$count}</span>";
+				 echo "<span class='basket-count'>({$count})</span>";
+			 } elseif( $count == 0 ) {
+				echo "<span class='basket-count'>(0)</span>";
 			 }
 		 ?>
-	</span>
-</a>
+	</a>
+
 <?php
- $fragments['span.basket'] = ob_get_clean();
+ $fragments['a.count'] = ob_get_clean();
 
  return $fragments;
 }
@@ -611,3 +612,33 @@ if ( ! function_exists( 'woocommerce_form_field' ) ) {
         }
     }
 }
+
+
+// WC Search Widget
+function custom_product_searchform( $form ) {
+	
+	$form = '
+		<form class="woocommerce-product-search" role="search" method="get" id="searchform" action="' . esc_url( home_url( '/'  ) ) . '">
+			<div>
+				<label class="screen-reader-text" for="s">' . __( 'Search for:', 'woocommerce' ) . '</label>
+
+				<div class="field has-addons">
+					<div class="control">
+						<input class="input" type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __( 'Search products...', 'woocommerce' ) . '" />                           
+						<input type="hidden" name="post_type" value="product" />
+					</div>
+
+				<div class="control">
+					<button class="button" type="submit" id="searchsubmit" />Search</button>
+				</div>
+			</div>
+
+
+			</div>
+		</form>';
+	
+	return $form;
+
+}
+
+add_filter( 'get_product_search_form' , 'custom_product_searchform' );

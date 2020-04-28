@@ -108,6 +108,14 @@
 		}
     }
 
+    .woocommerce-notices-wrapper {
+        @include from($tablet) {
+            width: 66.66666%;
+            margin: 0 auto $size-4 auto;
+
+        }
+    }
+
     table.shop_table {
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		margin: $size-4 -1px 24px 0;

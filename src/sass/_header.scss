@@ -1,47 +1,60 @@
+// Search Widget
+.search-wrap {
+    background: black;
+    height: $search-height-lrg;
+    margin-top: -$search-height-lrg;
+    transition: all .3s;
+    
+    &.active {
+        margin-top: 0;
+    }
+    .container {
+        padding: $size-4 0;
+    }
+    .widget_product_search {
+        form.woocommerce-product-search {
+            .has-addons {
+                .control:first-child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 .site-header {
     position: fixed;
+    height: $header-height-lrg;
     left: 0;
     right: 0;
     top: 0;
     background: white;
     z-index: 30;
-    transition: all 1s;
+    transition: all .3s;
     .scrolled & {
         border-bottom: 1px solid black;
         height: 80px;
+    }
+    .search-is-open & {
+        // position: relative;
+        top: $search-height-lrg;
     }
     .brand-wrap {
         display: flex;
         justify-content: space-between;
         padding-top: $size-6;
         padding-bottom: .8rem;
-        .icons-right, .icons-left {
-            > a {
+        .icons-right {
+            .my-account-icon {
                 padding-right: $size-4;
             }
-        }
-        .icons-right {
             .basket-icon {
                 position: relative;
-                .basket-count {
-                    display: block;
-                    position: absolute;
-                    top: -1px;
-                    left: 35px;
-                    color: black;
-                    font-weight: bold;
-                    &::before, &::after {
-                        content: "(";
-                        display: block;
-                        position: absolute;
-                        left: -10px;
-                        top: -1px;
-                    }
-                    &::after {
-                        content: ")";
-                        left: 15px;
-                    }
-                }
+                padding-right: $size-6;
+            }
+            .count {
+                color: black;
+                font-weight: bold;
             }
         }
         .scrolled & {
@@ -49,20 +62,6 @@
         }
         .icons-left {
             position: relative;
-            .search-wrap {
-                position: absolute;
-                width: 500px;
-                top: -6px;
-                left: 26px;
-                display: none;
-                z-index: 100;
-                &.active {
-                    display: block;
-                }
-                .field {
-                    display: flex;
-                }
-            }
         }
         .icon {
             color: black;
