@@ -18,20 +18,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     windowScroll();
 
+    
+    // Responsive Menu
+    function resposiveMenu() {
+        let burger = document.querySelector('.navbar-burger');
+        let mobileMenu = document.querySelector('.navbar');
+        burger.addEventListener('click', function(e) {
+            e.preventDefault();
+            mobileMenu.classList.toggle('active');
+        });
+    }
+
+    resposiveMenu();
+
 
     // Search Pop Up
     function searchPopUp() {
-        let searchIcon = document.querySelector('.search-icon');
+        let searchIcons = document.querySelectorAll('.search-icon');
         let searchWrap = document.querySelector('.search-wrap');
         let body = document.querySelector('body');
-
-        searchIcon.addEventListener('click', function(e) {
-            e.preventDefault();
-            // Scroll page to top
-            document.documentElement.scrollTop = 0;
-            body.classList.toggle('search-is-open');
-            searchWrap.classList.toggle('active');
-        });
+        let searchIconArr = Array.prototype.slice.call(searchIcons);
+        for (let i = 0; i < searchIconArr.length; i++) {
+            searchIconArr[i].addEventListener('click', function(e) {
+                e.preventDefault();
+                // Scroll page to top
+                document.documentElement.scrollTop = 0;
+                body.classList.toggle('search-is-open');
+                searchWrap.classList.toggle('active');
+            });    
+        }
+        
     };
 
     searchPopUp();

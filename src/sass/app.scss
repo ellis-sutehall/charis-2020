@@ -27,12 +27,18 @@
 }
 
 .site-content {
-  margin-top: $header-height-lrg;
-  margin-bottom: $size-1 * 2;
+  margin-top: $header-height;
+  // margin-bottom: $size-1;
+
+  @include from($tablet) {
+    margin-top: $header-height-lrg;
+    // margin-bottom: $size-1 * 2;
+
+  }
 }
 
 .container {
-  padding: 0 $size-4;
+  padding: 0 $size-6;
   
   @include from($tablet) {
     padding: 0;
@@ -42,9 +48,38 @@
 
 
 section:not(.hero, .sign-up, .widget-filters, .search-wrap) {
-  margin-bottom: $size-1 *2;
+  // margin-bottom: $size-1;
+
+  @include from($tablet) {
+    margin-bottom: $size-1 *2;
+  }
+  
+}
+
+section {
+  
+  .container {
+    padding-top: $size-1;
+    padding-bottom: $size-1;
+    
+    @include from($tablet) {
+        padding-top: $size-1 * 2;
+        padding-bottom: $size-1 * 2;
+    }
+    
+  }
 }
 
 .grecaptcha-badge {
   display: none;
+}
+
+#_hj_feedback_container {
+  display: none;
+}
+
+.show-for-mobile {
+  @include from($tablet) {
+    display: none!important;
+  }
 }

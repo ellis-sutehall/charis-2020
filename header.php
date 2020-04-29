@@ -59,14 +59,22 @@
 						<span class='basket-count'>(0)</span>
 					</a>
 				</div>
-			</div>
-			
-			<nav id="site-navigation" class="navbar main-navigation">
 				<a role="button" class="navbar-burger" aria-controls="primary-menu" aria-expanded="false">
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
 				</a>
+			</div>
+			
+			<nav id="site-navigation" class="navbar main-navigation">
+				<div class="mobile-menu-icons show-for-mobile">
+					<a class="search-icon" href="#" title="Search">
+						<span class="icon is-small"><i class="fas fa-search" aria-hidden-true></i></span>
+					</a>
+					<a class="my-account-icon" href="/my-account">
+						<span class="icon is-small" title="My Account"><i class="fas fa-user" aria-hidden-true></i></span>
+					</a>
+				</div>
 				<?php
 				$args = array(
 					'theme_location' => 'menu-1',

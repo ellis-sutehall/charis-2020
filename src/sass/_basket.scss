@@ -1,6 +1,10 @@
 .woocommerce-cart {
     .site-content {
-        margin-top: 10rem;
+
+        @include from($tablet) {
+            margin-top: 10rem;
+        }
+        
     }
     h1 {
         // text-align: center;

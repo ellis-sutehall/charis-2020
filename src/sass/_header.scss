@@ -1,15 +1,24 @@
 // Search Widget
 .search-wrap {
     background: black;
-    height: $search-height-lrg;
-    margin-top: -$search-height-lrg;
     transition: all .3s;
+    height: $search-height;
+    margin-top: -$search-height;
+    
+    @include from($tablet) {
+        height: $search-height-lrg;
+        margin-top: -$search-height-lrg;
+    }
     
     &.active {
         margin-top: 0;
     }
     .container {
-        padding: $size-4 0;
+        padding: $size-6 / 2 $size-4;
+        @include from($tablet) {
+            padding: $size-4 0;
+        }
+
     }
     .widget_product_search {
         form.woocommerce-product-search {
@@ -24,44 +33,120 @@
 
 .site-header {
     position: fixed;
-    height: $header-height-lrg;
+    height: $header-height;
     left: 0;
     right: 0;
     top: 0;
     background: white;
     z-index: 30;
     transition: all .3s;
+    @include from($tablet) {
+        height: $header-height-lrg;
+    }
     .scrolled & {
         border-bottom: 1px solid black;
-        height: 80px;
+        @include from($tablet) {
+            height: 80px;
+        }
     }
     .search-is-open & {
-        // position: relative;
-        top: $search-height-lrg;
+        top: $search-height;
+        
+        @include from($tablet) {
+            top: $search-height-lrg;
+        }
+
+    }
+    & > {
+        .container {
+            padding: 0;
+            height: 100%;
+        }
     }
     .brand-wrap {
         display: flex;
         justify-content: space-between;
-        padding-top: $size-6;
-        padding-bottom: .8rem;
+        padding: $size-6 $size-6 .8rem $size-6;
+        position: relative;
+        @include from($tablet) {
+            position: initial;
+            // padding: $size-6 $size-4 0 $size-4;
+            padding: $size-6 0 0 0;
+        }
+
+        .icons-left, .icons-right {
+            min-width: 35px;
+            
+            @include from($tablet) {
+                min-width: 0;
+            }
+
+        }
+
         .icons-right {
+            position: relative;
+            order: -1;
+            @include from($tablet) {
+                position: initial;
+                order: initial;
+            }
             .my-account-icon {
-                padding-right: $size-4;
+                padding-right: .5rem;
+                display: none;
+                
+                @include from($tablet) {
+                    padding-right: $size-4;
+                    display: inline-block;
+                }
             }
             .basket-icon {
-                position: relative;
-                padding-right: $size-6;
+                // padding-right: .3rem;
+                // position: relative;
+
+                @include from($tablet) {
+                    // padding-right: $size-6;
+                }
+
             }
             .count {
-                color: black;
+                top: -8px;
+                left: -3px;
                 font-weight: bold;
+                font-size: 11px;
+                color: $red;
+                position: relative;
+
+                @include from($tablet) {
+                    color: black;
+                    position: initial;
+                    top: auto;
+                    left: auto;
+                    font-size: 1em;
+                }
             }
         }
         .scrolled & {
-            padding-bottom: .4rem;
+            @include from($tablet) {
+                padding-bottom: .4rem;
+            }
         }
         .icons-left {
             position: relative;
+            order: 1;
+            
+            @include from($tablet) {
+                order: initial;
+            }
+
+            .search-icon {
+                display: none;
+                
+                @include from($tablet) {
+                    display: block;
+                }
+
+            }
+
         }
         .icon {
             color: black;
@@ -73,40 +158,112 @@
                 background-position: center;
                 background-size: contain;
                 text-indent: -1000000px;
-                width: 240px;
-                height: 35px;
+                // Get exact sizes
+                width: 150px;
+                height: 20px;
                 display: block;
                 transition: all .5s;
-                .scrolled & {
-                    width: 137px;
-                    height: 20px;
+                @include from($tablet) {
+                    width: 240px;
+                    height: 35px;
                 }
+                .scrolled & {
+                    @include from($tablet) {
+                        width: 137px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+        .navbar-burger {
+            position: absolute;
+            top: 3px;
+            right: 6px;
+            span {
+                height: 2px;
             }
         }
     }
     
     .navbar {
-        background: 0;
+        background: black;
+        position: initial;
+        border-top: 1px solid white;
+        position: fixed;
+        width: 100%;
+        right: -100%;
+        transition: right .5s;
+        @include from($tablet) {
+            position: relative;
+            right: auto;
+            border-top: 0;
+            background: 0;
+        }
+        &.active {
+            right: 0;
+        }
+        
         .scrolled & {
-            min-height: 0;
+            @include from($tablet) {
+                min-height: 0;
+            }
+        }
+        .mobile-menu-icons {
+            display: flex;
+            justify-content: space-between;
+            padding-top: $size-6;
+            padding-left: $size-6;
+            padding-right: $size-6;
+            a {
+                color: white;
+            }
+
+            @include from($tablet) {
+                display: none;
+            }
         }
         .menu-menu-1-container {
             text-align: center;
             width: 100%;
+            height: 100vh;
+            background: black;
+            @include from($tablet) {
+                height: auto;
+                background: 0;
+            }
             .navbar-menu {
-                display: inline-flex;
+                display: block;
+                box-shadow: none;
+                background: black;
+                @include from($tablet) {
+                    display: inline-flex;
+                    background: 0;
+                }
+
                 li {
-                    padding: .8rem 2rem 0 0;
+                    padding: 1rem 0 0 0;
                     position: relative;
+
+                    @include from($tablet) {
+                        padding: .8rem 2rem 0 0;
+                    }
+
                     a {
-                        color: black;
+                        color: white;
                         transition: all .5s;
+
+                        @include from($tablet) {
+                            color: black;
+                        }
+                        
                         &:hover {
                             color: #333333;
                         }
                     }
                     .scrolled & {
-                        padding-top: 0;
+                        @include from($tablet) {
+                            padding-top: 0;
+                        }
                     }
                     &.menu-item-has-children {
                         &:hover {

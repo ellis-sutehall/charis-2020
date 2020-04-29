@@ -4,7 +4,12 @@
     background-position: top;
     background-size: cover;
     &.is-fullheight {
+        min-height: calc(100vh - #{$header-height});
+
+        @include from($tablet) {
         min-height: calc(100vh - #{$header-height-lrg});
+
+        }
     }
     // .title {
     //     &.is-4 {
@@ -14,9 +19,15 @@
 }
 
 .latest-products {
-    padding-bottom: $size-1;
+
+    @include from($tablet) {
+        padding-bottom: $size-1;
+    }
+
     h2 {
-        padding: $size-1 0 $size-6 0;
+        @include from($tablet) {
+            padding: $size-1 0 $size-6 0;
+        }
     }
 }
 
@@ -28,6 +39,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    // .container {
+    //     padding: $size-4;
+    // }
 }
 
 .featured {

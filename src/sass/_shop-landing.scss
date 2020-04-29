@@ -83,7 +83,7 @@
         grid-template-columns: repeat(auto-fill, 45%);
         justify-content: space-between;
         margin-bottom: $size-2;
-        padding: 0 $size-6;
+        // padding: 0 $size-6;
         @include from($tablet) {
             grid-template-columns: repeat(auto-fill, 23%);
             padding: 0;

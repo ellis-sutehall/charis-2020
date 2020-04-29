@@ -100,7 +100,7 @@
 		<div class="copyright">
 			<div class="container">
 				<div class="columns">
-					<div class="column">
+					<div class="column has-text-centered has-text-left-desktop">
 						<p>Copyright &copy; <?php echo date("Y"); ?> Charis Sutehall</p>
 					</div>
 					<div class="column">

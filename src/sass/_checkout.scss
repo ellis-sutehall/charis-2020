@@ -1,6 +1,8 @@
 .woocommerce-checkout {
     .site-content {
-        margin-top: 10rem;
+        @include from($tablet) {
+            margin-top: 10rem;
+        }
     }
     .entry-content > .woocommerce, h1 {
         @include from($tablet) {
