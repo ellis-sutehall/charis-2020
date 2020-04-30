@@ -16,7 +16,7 @@
 
 	<?php charis_2020_post_thumbnail(); ?>
 
-	<div class="entry-content container <?php if( is_page('5') || is_product_category() ) { echo 'shop-landing-wrap'; } ?>">
+<div class="entry-content <?php if( !is_account_page() ): ?> container <?php endif; ?> <?php if( is_page('5') || is_product_category() ) { echo 'shop-landing-wrap'; } ?>">
 		<?php
 		the_content();
 

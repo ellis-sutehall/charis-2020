@@ -355,7 +355,7 @@ function update_cart_icon_count( $fragments ) {
 add_filter( 'woocommerce_add_to_cart_fragments', 'update_cart_icon_count' );
 
 
-// Remove styles for select forms (Effect Category Widget)
+// Remove styles for select forms (Effects Category Widget)
 function dequeue_stylesandscripts_select2() {
 	if ( class_exists( 'woocommerce' ) ) {
 		wp_dequeue_style( 'select2' );
@@ -369,6 +369,13 @@ function dequeue_stylesandscripts_select2() {
 add_action( 'wp_print_scripts', 'dequeue_stylesandscripts_select2', 100 );
 
 
+// Move star rating under price
+function change_loop_ratings_location(){
+    remove_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_rating', 5 );
+    add_action('woocommerce_after_shop_loop_item_title','woocommerce_template_loop_rating', 15 );
+}
+
+add_action('woocommerce_after_shop_loop_item_title','change_loop_ratings_location', 2 );
 
 
 

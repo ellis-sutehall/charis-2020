@@ -37,7 +37,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="container">
-			<div class="brand-wrap">
+			<div class="brand-wrap is-vcentered">
 				<div class="icons-left">
 					<a class="search-icon" href="#" title="Search">
 						<span class="icon is-small"><i class="fas fa-search" aria-hidden-true></i></span>

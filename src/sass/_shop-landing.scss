@@ -96,11 +96,11 @@
             display: flex;
             flex-direction: column;
             text-align: center;
-            margin-bottom: $size-3;
             flex-grow: 1;
+            position: relative;
 
             @include from($tablet) {
-                position: relative;
+                margin-bottom: $size-3;
 
                 &:nth-child(4n-7) {
                     margin-left: 0;
@@ -131,6 +131,9 @@
 
             .woocommerce-loop-product__title {
                 margin-bottom: .5rem;
+                @include mobile {
+                    font-size: 1rem;
+                }
             }
             .star-rating {
                 width: 90px;
@@ -146,11 +149,43 @@
                     transition: all .3;
                 }
             }
+            .price {
+                .woocommerce-Price-amount {
+                    font-size: 1.25rem;
+                    .woocommerce-Price-currencySymbol {
+                        font-size: 1rem;
+                    }
+                }
+            }
             .button {
-                width: 100%;
-
+                display: none;
+                // @include mobile {
+                //     width: 40px;
+                //     height: 40px;
+                //     justify-content: center;
+                //     position: absolute;
+                //     right: 0;
+                //     bottom: 9px;
+                //     border: 0;
+                //     text-indent: -100000px;
+                // }
+                &::before, &::after {
+                    @extend %fa-icon;
+                    @extend .fas;
+                }
+                // @include from($tablet) {
+                    &::before {
+                        content: fa-content($fa-var-plus);
+                    }
+                // }
+                &::after {
+                    content: fa-content($fa-var-shopping-basket);
+                    text-indent: 0;
+                }
                 @include from($tablet) {
-                    // width: 50%;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
                     border: 0;
                     border-radius: 0;
                     background: lightblue;

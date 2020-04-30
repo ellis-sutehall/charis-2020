@@ -1,0 +1,105 @@
+.woocommerce-account {
+    h1 {
+        width: 66.66666%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding-top: $size-1;
+    }
+
+    // Logged Out
+
+    .remember, .woocommerce-privacy-policy-text {
+        margin-bottom: $size-4;
+    }
+
+    .my-account-login h2, .my-account-register h2 {
+        &::before {
+            @extend %fa-icon;
+            @extend .fas;
+            display: block;
+            color: lightgray;
+        }
+    }
+
+    .my-account-login h2 {
+        &::before {
+            content: fa-content($fa-var-user);
+        }
+    }
+
+    .my-account-register h2 {
+        &::before {
+            content: fa-content($fa-var-user-plus);
+        }
+    }
+
+    // Logged in
+
+    .woocommerce-MyAccount-navigation {
+        .menu-list {
+            li {
+                a {
+                    font-size: 1.5rem;
+                    &::before {
+                        @extend %fa-icon;
+                        @extend .fas;
+                        margin-right: 10px;
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+
+                &.woocommerce-MyAccount-navigation-link--dashboard {
+                    a {
+                        &::before {
+                            content: fa-content($fa-var-tachometer-alt);
+                        }
+                    }
+                }
+
+                &.woocommerce-MyAccount-navigation-link--orders {
+                    a {
+                        &::before {
+                            content: fa-content($fa-var-clipboard-list);
+                        }
+                    }
+                }
+
+                &.woocommerce-MyAccount-navigation-link--edit-address {
+                    a {
+                        &::before {
+                            content: fa-content($fa-var-map-marker-alt);
+                        }
+                    }
+                }
+
+                &.woocommerce-MyAccount-navigation-link--payment-methods {
+                    a {
+                        &::before {
+                            content: fa-content($fa-var-credit-card);
+                        }
+                    }
+                }
+
+                &.woocommerce-MyAccount-navigation-link--edit-account {
+                    a {
+                        &::before {
+                            content: fa-content($fa-var-user);
+                        }
+                    }
+                }
+
+                &.woocommerce-MyAccount-navigation-link--customer-logout {
+                    a {
+                        &::before {
+                            content: fa-content($fa-var-sign-out-alt);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
