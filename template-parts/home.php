@@ -12,7 +12,7 @@ get_header();
                 <div class="column is-one-third is-offset-8">
                     <h1 class="title is-2">Charis Sutehall Jewellery</h1>
                     <h4 class="title is-4">Bespoke Sterling Silver Jewellery <br>Handmade in Cambridge</h4>
-                    <a href="#" class="button is-link is-outlined">Shop Now</a>
+                    <a href="/shop" class="button is-link is-outlined">Shop Now</a>
                 </div>
             </div>
         </div>
@@ -60,10 +60,11 @@ get_header();
     <div class="container">
         <div class="columns">
             <div class="column is-one-third">
-                <h2 class="title is-2">Big Enticing Headline</h2>
-                <h4 class="title is-4">Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </h4>
-                <a href="#" class="button is-link is-primary is-outlined">Shop Now</a>
+                <h2 class="title is-2">View all the latest earrings</h2>
+                <h4 class="title is-4">Handmade Sterling Silver Earrings. Various styles and designs to suit every occasion. From plant-inspired to insect wings I’m sure there’s something you’ll love.</h4>
+                <a href="/shop/category/earrings" class="button is-link is-primary is-outlined">Shop Now</a>
             </div>
+            <div class="column is-hidden-desktop-only"></div>
         </div>
     </div>
 </section>
@@ -117,8 +118,9 @@ get_header();
             <div class="column is-one-third is-offset-8">
                 <h2 class="title is-2">Big Enticing Headline</h2>
                 <h4 class="title is-4">Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </h4>
-                <a href="#" class="button is-link is-primary is-outlined">Shop Now</a>
+                <a href="/shop/category/bangles" class="button is-link is-primary is-outlined">Shop Now</a>
             </div>
+            <div class="column is-hidden-desktop-only"></div>
         </div>
     </div>
 </section>

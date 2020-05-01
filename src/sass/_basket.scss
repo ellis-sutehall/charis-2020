@@ -6,14 +6,16 @@
         }
         
     }
-    h1 {
-        // text-align: center;
+    .cart-empty, .return-to-shop, h1 {
         @include from($tablet) {
             width: 66.66666%;
         }
         margin-bottom: $size-2;
         margin-left: auto;
         margin-right: auto;
+    }
+    h1 {
+        margin-bottom: $size-2;
     }
 
 	table.shop_table_responsive {

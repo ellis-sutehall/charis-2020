@@ -18,7 +18,11 @@
 }
 
 .single-product {
-    padding-top: $size-4;
+    padding-top: 0;
+
+    @include from($tablet) {
+        // padding-top: $size-4;
+    }
 
     // .woocommerce-notices-wrapper {
     //     margin-bottom: $size-4;
@@ -43,9 +47,40 @@
         position: relative;
         .woocommerce-product-gallery__trigger {
             position: absolute;
-            bottom: 132px;
-            left: 20px;
-            z-index: 100;
+            top: .5em;
+            right: .5em;
+            font-size: 2em;
+            z-index: 9;
+            width: 36px;
+            height: 36px;
+            background: #fff;
+            text-indent: -9999px;
+            border-radius: 100%;
+            box-sizing: content-box;
+            &::before, &::after {
+                display: block;
+                position: absolute;
+                box-sizing: content-box;
+            }
+            &::before {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border: 2px solid #000;
+                border-radius: 100%;
+                top: 9px;
+                left: 9px;
+            }
+            &::after {
+                content: "";
+                width: 2px;
+                height: 8px;
+                background: #000;
+                border-radius: 6px;
+                top: 19px;
+                left: 22px;
+                transform: rotate(-45deg);
+            }
         }
         .woocommerce-product-gallery__image {
             a {
@@ -83,12 +118,35 @@
     }
 
     .related.products {
-        margin-top: $size-1 * 2;
-        .product {
-            &::before {
-                display: none;
+
+        @include from($tablet) {
+            margin-top: $size-1 * 2;
+        }
+        .container {
+            @include mobile {
+                padding-top: $size-4;
+            }
+
+            padding-bottom: 0;
+        }
+        ul.products {
+            margin-bottom: 0;
+            .product {
+                margin-bottom: 0;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 40px;
+                    display: block;
+                    background-color: white;
+                    top: -40px;
+                    left: 0;
+                    z-index: 20;
+                }
             }
         }
+        
         .add_to_cart_button {
             display: none;
         }

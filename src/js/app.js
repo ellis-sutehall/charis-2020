@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         burger.addEventListener('click', function(e) {
             e.preventDefault();
             mobileMenu.classList.toggle('active');
+            burger.classList.toggle('is-active');
         });
     }
 

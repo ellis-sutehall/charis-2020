@@ -1,7 +1,30 @@
-.map {
-    height: 50vh;
-    iframe {
-        width: 100%;
-        height: 100%;
+.page-template-contact {
+
+    .map {
+        height: 50vh;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
     }
+
+    .columns {
+        display: flex;
+        flex-direction: column;
+        
+        @include from($tablet) {
+            flex-direction: row;
+        }
+
+        .column {
+            &:nth-child(2) {
+                @include mobile {
+                    order: -1;
+                }
+            }
+        }
+
+    }
+
 }
+

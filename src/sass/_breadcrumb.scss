@@ -1,4 +1,9 @@
 .woocommerce-breadcrumb {
-    margin-top: $size-1;
-    margin-bottom: $size-2;
+    margin-top: $size-6;
+
+    @include from($tablet) {
+        margin-top: $size-1;
+        margin-bottom: $size-2;
+    }
+    
 }

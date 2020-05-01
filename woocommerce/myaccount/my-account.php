@@ -23,14 +23,19 @@ defined( 'ABSPATH' ) || exit;
  * @since 2.6.0
  */
 do_action( 'woocommerce_account_navigation' ); ?>
-
-<div class="container woocommerce-MyAccount-content">
-	<?php
-		/**
-		 * My Account content.
-		 *
-		 * @since 2.6.0
-		 */
-		do_action( 'woocommerce_account_content' );
-	?>
-</div>
+			<div class="column is-two-thirds">
+				<div class="woocommerce-MyAccount-content">
+					<?php
+						/**
+						 * My Account content.
+						 *
+						 * @since 2.6.0
+						 */
+						do_action( 'woocommerce_account_content' );
+					?>
+				</div>
+			</div>
+		<!--  Opens in myaccount/navigation.php -->
+		</div>
+	</div>
+</section>

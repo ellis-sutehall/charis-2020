@@ -24,24 +24,6 @@
         padding-bottom: $size-1;
     }
 
-    h2 {
-        @include from($tablet) {
-            padding: $size-1 0 $size-6 0;
-        }
-    }
-}
-
-.cta {
-    display: flex;
-    align-items: center;
-    min-height: 50vh;
-    background-image: url('../img/cta-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    // .container {
-    //     padding: $size-4;
-    // }
 }
 
 .featured {

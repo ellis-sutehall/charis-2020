@@ -52,6 +52,11 @@
             right: 32px;
         }
     }
+
+    .widget_layered_nav_filters {
+        margin-top: $size-6;
+    }
+
 }
 
 .shop-landing-wrap {
@@ -151,7 +156,11 @@
             }
             .price {
                 .woocommerce-Price-amount {
-                    font-size: 1.25rem;
+
+                    @include from($tablet) {
+                        font-size: 1.25rem;
+                    }
+
                     .woocommerce-Price-currencySymbol {
                         font-size: 1rem;
                     }

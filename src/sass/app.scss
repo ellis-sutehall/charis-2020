@@ -8,6 +8,7 @@
 @import './header';
 @import './breadcrumb';
 @import './home';
+@import './cta';
 @import './shop-landing';
 @import './shop-single-product';
 @import './about';
@@ -27,15 +28,17 @@
   font-weight: lighter;
 }
 
+p {
+  margin-bottom: $size-6;
+}
+
 .site-content {
   margin-top: $header-height;
-  // margin-bottom: $size-1;
 
   @include from($tablet) {
     margin-top: $header-height-lrg;
-    // margin-bottom: $size-1 * 2;
-
   }
+
 }
 
 .container {
@@ -47,18 +50,13 @@
   
 }
 
-
-section:not(.hero, .sign-up, .widget-filters, .search-wrap) {
+section:not(.hero, .sign-up, .widget-filters, .search-wrap, .cta, .latest-products, .map) {
   margin-bottom: $size-1;
 
   @include from($tablet) {
     margin-bottom: $size-1;
   }
-  
-}
 
-section {
-  
   .container {
     padding-top: $size-1;
     padding-bottom: $size-1;
@@ -69,6 +67,7 @@ section {
     }
     
   }
+  
 }
 
 .grecaptcha-badge {

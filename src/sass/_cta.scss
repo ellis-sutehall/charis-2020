@@ -1,0 +1,52 @@
+.cta {
+    display: flex;
+    align-items: center;
+    
+    @include from($tablet) {
+        background-image: url('../img/cta-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 50vh;
+    }
+
+    .container {
+        @include mobile {
+            padding-bottom: 0;
+        }
+    }
+
+    .columns {
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .column {
+            
+            @include mobile {
+                min-height: 50vh;
+            }
+
+            &.is-one-third {
+
+            }
+
+            &.is-hidden-desktop-only {
+                
+                @include mobile {
+                    order: -1;
+                    background-image: url('../img/cta-bg.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    min-height: 50vh;
+                }
+
+            }
+        }
+
+    }
+
+}

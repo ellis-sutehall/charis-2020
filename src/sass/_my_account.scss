@@ -50,6 +50,13 @@
                     }
                 }
 
+                &.is-active {
+                    background: $blue;
+                    a {
+                        color: white;
+                    }
+                }
+
                 &.woocommerce-MyAccount-navigation-link--dashboard {
                     a {
                         &::before {
@@ -98,6 +105,57 @@
                     }
                 }
 
+            }
+        }
+    }
+
+    .woocommerce-MyAccount-orders {
+        width: 100%;
+        th, td {
+            padding: $size-6;
+            vertical-align: middle;
+        }
+        tr {
+            &:nth-child(even) {
+                background: lightgray;
+            }
+        }
+    }
+
+    .woocommerce-order-details, .woocommerce-customer-details {
+        h2 {
+            font-size: $size-2;
+        }
+    }
+    .woocommerce-order-details {
+        .woocommerce-table--order-details {
+            width: 100%;
+            margin-bottom: $size-1;
+            th,td {
+                padding: $size-6 / 2;
+            }
+        }
+    }
+    .woocommerce-customer-details {
+        .woocommerce-column--billing-address {
+            margin-bottom: $size-1;
+        }
+    }
+
+    .woocommerce-MyAccount-content {
+        .woocommerce-Address {
+            margin-bottom: $size-1;
+        }
+    }
+
+    #add_payment_method {
+        label[for="payment_method_stripe"] {
+            display: flex;
+            justify-content: flex-start;
+            margin-bottom: $size-4;
+            img {
+                width: 100px;
+                margin: 0 10px 0 10px;
             }
         }
     }
