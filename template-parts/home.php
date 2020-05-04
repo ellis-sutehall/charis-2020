@@ -22,7 +22,7 @@ get_header();
 <section class="latest-products">
     <div class="container">
         <h2 class="title is-2 has-text-centered">Latest Products</h2>
-        <div class="columns is-centered">
+        <div class="columns is-centered is-multiline">
             <?php
                 $args = array(
                     'post_type' => 'product',
@@ -34,7 +34,7 @@ get_header();
                 if ( $loop->have_posts() ) {
                     while ( $loop->have_posts() ) : $loop->the_post();
                     ?>
-                    <div class="column is-quarter">
+                    <div class="column is-half-tablet is-one-quarter-desktop">
                     <?php
                         $product = wc_get_product(get_the_ID());
                         ?>
@@ -56,7 +56,7 @@ get_header();
     </div>
 </section>
 
-<section class="cta">
+<section class="cta earrings">
     <div class="container">
         <div class="columns">
             <div class="column is-one-third">
@@ -64,7 +64,7 @@ get_header();
                 <h4 class="title is-4">Handmade Sterling Silver Earrings. Various styles and designs to suit every occasion. From plant-inspired to insect wings I’m sure there’s something you’ll love.</h4>
                 <a href="/shop/category/earrings" class="button is-link is-primary is-outlined">Shop Now</a>
             </div>
-            <div class="column is-hidden-desktop-only"></div>
+            <div class="column is-hidden-tablet is-hidden-desktop"></div>
         </div>
     </div>
 </section>
@@ -112,15 +112,15 @@ get_header();
     </div>
 </section>
 
-<section class="cta content-right">
+<section class="cta content-right bangles">
     <div class="container">
         <div class="columns">
             <div class="column is-one-third is-offset-8">
-                <h2 class="title is-2">Big Enticing Headline</h2>
+                <h2 class="title is-2">View all Bangles</h2>
                 <h4 class="title is-4">Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </h4>
                 <a href="/shop/category/bangles" class="button is-link is-primary is-outlined">Shop Now</a>
             </div>
-            <div class="column is-hidden-desktop-only"></div>
+            <div class="column is-hidden-tablet is-hidden-desktop"></div>
         </div>
     </div>
 </section>

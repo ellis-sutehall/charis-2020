@@ -71,7 +71,7 @@
         justify-content: space-between;
         padding: $size-6 $size-6 .8rem $size-6;
         position: relative;
-        @include from($tablet) {
+        @include from($desktop) {
             position: initial;
             // padding: $size-6 $size-4 0 $size-4;
             padding: $size-6 0 0 0;

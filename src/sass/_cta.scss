@@ -1,6 +1,14 @@
 .cta {
     display: flex;
     align-items: center;
+
+    h2, h4 {
+        
+        @include from($tablet) {
+            color: white!important;
+        }
+
+    }
     
     @include from($tablet) {
         background-image: url('../img/cta-bg.jpg');
@@ -26,14 +34,10 @@
         .column {
             
             @include mobile {
-                min-height: 50vh;
+                // min-height: 50vh;
             }
 
-            &.is-one-third {
-
-            }
-
-            &.is-hidden-desktop-only {
+            &.is-hidden-desktop {
                 
                 @include mobile {
                     order: -1;
@@ -44,6 +48,76 @@
                     min-height: 50vh;
                 }
 
+            }
+        }
+
+    }
+
+    &.bangles {
+        
+        @include from($tablet) {
+            background-image: url('../img/cta-bg-bangles-2.jpg');
+        }
+
+        .columns {
+            .column {
+                &.is-hidden-desktop {
+                    background-image: url('../img/cta-bg-bangles-2.jpg');
+                }
+            }
+        }
+
+    }
+
+
+    &.earrings {
+        
+        @include from($tablet) {
+            background-image: url('../img/cta-bg-earrings.jpg');
+        }
+
+        .columns {
+            .column {
+                &.is-hidden-desktop {
+                    background-image: url('../img/cta-bg-earrings.jpg');
+                    background-position: right;
+                }
+            }
+        }
+
+    }
+
+
+    &.necklaces {
+        
+        @include from($tablet) {
+            background-image: url('../img/cta-bg-necklaces.jpg');
+        }
+
+        .columns {
+            .column {
+                &.is-hidden-desktop {
+                    background-image: url('../img/cta-bg-necklaces.jpg');
+                    background-position: right;
+                }
+            }
+        }
+
+    }
+
+
+    &.rings {
+        
+        @include from($tablet) {
+            background-image: url('../img/cta-bg-rings.jpg');
+        }
+
+        .columns {
+            .column {
+                &.is-hidden-desktop {
+                    background-image: url('../img/cta-bg-rings.jpg');
+                    background-position: right;
+                }
             }
         }
 

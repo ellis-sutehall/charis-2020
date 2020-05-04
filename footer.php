@@ -13,6 +13,36 @@
 
 	</div><!-- #content -->
 
+	<?php /* Check if product page */ ?>
+	<?php if( is_product() ): ?>
+
+	<?php
+		// Get category to output as class name
+		global $post;
+		$terms = get_the_terms( $post->ID, 'product_cat' );
+		if($terms) {
+			foreach ($terms as $term) {
+				$product_cat_name = $term->name;
+				break;
+			}
+		}
+	?>
+
+		<section class="cta content-right <?php echo strtolower($product_cat_name); ?>">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-one-third <?php if($product_cat_name == 'Bangles' || $product_cat_name == 'Necklaces' || $product_cat_name == 'Rings') echo 'is-offset-8'; ?>">
+						<h2 class="title is-2">View all <?php echo strtolower($product_cat_name); ?></h2>
+						<h4 class="title is-4">Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </h4>
+						<a href="/shop/category/<?php echo strtolower($product_cat_name); ?>" class="button is-link is-primary is-outlined">Shop Now</a>
+					</div>
+					<div class="column is-hidden-tablet is-hidden-desktop"></div>
+				</div>
+			</div>
+		</section>
+
+	<?php endif; ?>
+
 	<section class="sign-up">
 		<div class="container">
 			<div class="columns">

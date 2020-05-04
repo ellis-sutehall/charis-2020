@@ -1,3 +1,6 @@
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+$navbar-breakpoint: $tablet;
+
 @import "../../node_modules/bulma/bulma.sass";
 
 @import './variables';
@@ -41,10 +44,16 @@ p {
 
 }
 
+.page-template-home {
+  .site-content {
+    margin-top: 0;
+  }
+}
+
 .container {
   padding: 0 $size-6;
   
-  @include from($tablet) {
+  @include from($desktop) {
     padding: 0;
   }
   
