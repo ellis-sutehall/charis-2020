@@ -9,14 +9,19 @@
 
 ?>
 
+<?php
+	$term = get_queried_object();
+	$cat_slug = $term->slug;
+?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header container">
+	<header class="entry-header container <?php echo $cat_slug; ?>">
 		<?php the_title( '<h1 class="title is-1 entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php charis_2020_post_thumbnail(); ?>
 
-<div class="entry-content <?php if( !is_account_page() ): ?> container <?php endif; ?> <?php if( is_page('5') || is_product_category() ) { echo 'shop-landing-wrap'; } ?>">
+	<div class="entry-content <?php if( !is_account_page() ): ?> container <?php endif; ?> <?php if( is_page('5') || is_product_category() ) { echo 'shop-landing-wrap'; } ?>">
 		<?php
 		the_content();
 

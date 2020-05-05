@@ -257,6 +257,10 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // Custom
 
+// Custom images sizes
+add_image_size( 'shop-single-thumb', 610, 610, true );
+
+
 // Add template for Widget filters to shop landing page
 function widget_shop_filter() {
 	require_once get_template_directory() . '/inc/widget-filters.php';
@@ -649,3 +653,40 @@ function custom_product_searchform( $form ) {
 }
 
 add_filter( 'get_product_search_form' , 'custom_product_searchform' );
+
+
+/**
+ * Display category image on category archive
+ */
+// remove_action('woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10);
+// remove_action('woocommerce_archive_description', 'woocommerce_product_archive_description', 10);
+// // add_action( 'woocommerce_before_shop_loop', 'woocommerce_taxonomy_archive_description', 2 );
+// add_action( 'woocommerce_before_shop_loop', 'woocommerce_category_image', 2 );
+// function woocommerce_category_image() {
+//     if ( is_product_category() ){
+// 		global $wp_query;
+// 		$desc = '';
+// 		if ( is_product_taxonomy() && 0 === absint( get_query_var( 'paged' ) ) ) {
+// 			$term = get_queried_object();
+
+// 			if ( $term && ! empty( $term->description ) ) {
+// 				$desc = '<div class="term-description">' . wc_format_content( $term->description ) . '</div>'; // WPCS: XSS ok.
+// 			}
+// 		}
+// 	    $cat = $wp_query->get_queried_object();
+// 	    $thumbnail_id = get_term_meta( $cat->term_id, 'thumbnail_id', true );
+// 	    $image = wp_get_attachment_url( $thumbnail_id );
+// 	    if ( $image ) {
+// 			echo '
+// 			<section class="shop-hero" style="background-image:url('. $image. ');">
+// 				<div class="cat_details container">
+// 					<div class="columns">
+// 						<div class="column">
+// 							' . $desc . '
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</section>';
+// 		}
+// 	}
+// }

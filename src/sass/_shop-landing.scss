@@ -1,4 +1,19 @@
 .shop-landing-wrap {
+
+    & > .term-description {
+        display: none;
+    }
+
+    .shop-hero {
+        min-height: 50vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        .colunms {
+            align-items: flex-end;
+        }
+    }
+
     .container.select {
         height: 80px;
         width: 100%;
@@ -149,8 +164,7 @@
                 flex: 1 0 auto;
                 margin-bottom: $size-6;
                 img {
-                    // Create thumbnail in WP
-                    width: 336px;
+                    width: 310px;
                     transition: all .3;
                 }
             }

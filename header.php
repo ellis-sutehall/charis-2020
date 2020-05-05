@@ -80,6 +80,7 @@
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
 					'menu_class'     => 'navbar-menu',
+					'menu' => 'menu 1',
 				);
 				wp_nav_menu($args);
 				?>

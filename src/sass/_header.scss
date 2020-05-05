@@ -81,7 +81,7 @@
             min-width: 35px;
             
             @include from($tablet) {
-                min-width: 0;
+                width: 86px;
             }
 
         }
