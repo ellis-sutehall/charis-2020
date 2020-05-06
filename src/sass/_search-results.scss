@@ -1,0 +1,19 @@
+.search-results {
+    .search-results-wrap {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 45%);
+        justify-content: space-between;
+        margin-bottom: $size-2;
+        @include from($tablet) {
+            grid-template-columns: repeat(auto-fill, 23%);
+            padding: 0;
+        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            flex-grow: 1;
+            position: relative;
+        }
+    }
+}

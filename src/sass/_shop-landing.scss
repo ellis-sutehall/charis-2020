@@ -1,8 +1,8 @@
 .shop-landing-wrap {
 
-    & > .term-description {
-        display: none;
-    }
+    // & > .term-description {
+    //     display: none;
+    // }
 
     .shop-hero {
         min-height: 50vh;
@@ -182,25 +182,13 @@
             }
             .button {
                 display: none;
-                // @include mobile {
-                //     width: 40px;
-                //     height: 40px;
-                //     justify-content: center;
-                //     position: absolute;
-                //     right: 0;
-                //     bottom: 9px;
-                //     border: 0;
-                //     text-indent: -100000px;
-                // }
                 &::before, &::after {
                     @extend %fa-icon;
                     @extend .fas;
                 }
-                // @include from($tablet) {
-                    &::before {
-                        content: fa-content($fa-var-plus);
-                    }
-                // }
+                &::before {
+                    content: fa-content($fa-var-plus);
+                }
                 &::after {
                     content: fa-content($fa-var-shopping-basket);
                     text-indent: 0;
@@ -220,6 +208,9 @@
                     z-index: 10;
                 }
                 margin: 0 auto;
+            }
+            .added_to_cart {
+                @include button;
             }
         }
     }

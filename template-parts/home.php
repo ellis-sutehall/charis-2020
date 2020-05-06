@@ -11,15 +11,18 @@ get_header();
             <div class="columns">
                 <div class="column is-one-third is-offset-8">
                     <h1 class="title is-2">Charis Sutehall Jewellery</h1>
-                    <h4 class="title is-4">Bespoke Sterling Silver Jewellery <br>Handmade in Cambridge</h4>
-                    <a href="/shop" class="button is-link ">Shop Now</a>
+                    <h4 class="title is-4">Bespoke sterling silver jewellery <br>handmade in Cambridge</h4>
+                    <a href="/shop" class="button is-primary">Shop Now</a>
                 </div>
             </div>
         </div>
     </div>
+    <a href="#latest" class="jump-down button">
+        <span class="icon is-large"><i class="fa fa-arrow-down"></i></span>
+    </a>
 </section>
 
-<section class="latest-products">
+<section id="latest" class="latest-products">
     <div class="container">
         <h2 class="title is-2 has-text-centered">Latest Products</h2>
         <div class="columns is-centered is-multiline">
@@ -61,8 +64,8 @@ get_header();
         <div class="columns">
             <div class="column is-one-third">
                 <h2 class="title is-2">View all the latest earrings</h2>
-                <h4 class="title is-4">Handmade Sterling Silver Earrings. Various styles and designs to suit every occasion. From plant-inspired to insect wings I’m sure there’s something you’ll love.</h4>
-                <a href="/shop/category/earrings" class="button is-link is-primary ">Shop Now</a>
+                <h4 class="title is-4">Handmade sterling silver earrings. <br> Various styles and designs to suit every occasion.</h4>
+                <a href="/shop/category/earrings" class="button is-primary ">View Earrings</a>
             </div>
             <div class="column is-hidden-tablet is-hidden-desktop"></div>
         </div>
@@ -72,7 +75,9 @@ get_header();
 <section class="featured">
     <div class="container">
         <h2 class="title is-2 has-text-centered">Featured</h2>
-        <div class="columns">
+        <div class="columns is-centered">
+            <div class="column is-10">
+                <div class="columns">
             <?php
                 $args = array(
                     'post_type' => 'product',
@@ -95,7 +100,7 @@ get_header();
                         <a class="product-link" href="<?= $product->get_permalink(); ?>">
                             <h4 class="title is-4"><?= $product->get_title(); ?></h4>
                         </a>
-                        <h6 class="title is-5"><?php echo $product->get_short_description(); ?></h6>
+                        <!-- <p><?php // echo $product->get_short_description(); ?></p> -->
                         <!-- <p>£<?php // $product->get_price(); ?></p> -->
                         <?php
                         // var_dump($product);
@@ -108,6 +113,8 @@ get_header();
                 }
                 wp_reset_postdata();
             ?>
+            </div>
+            </div>
         </div>
     </div>
 </section>
@@ -117,8 +124,8 @@ get_header();
         <div class="columns">
             <div class="column is-one-third is-offset-8">
                 <h2 class="title is-2">View all Bangles</h2>
-                <h4 class="title is-4">Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </h4>
-                <a href="/shop/category/bangles" class="button is-link is-primary ">Shop Now</a>
+                <h4 class="title is-4">Handmade sterling silver bangles. <br> Various styles and shapes to suit everyone.</h4>
+                <a href="/shop/category/bangles" class="button is-primary ">View Bangles</a>
             </div>
             <div class="column is-hidden-tablet is-hidden-desktop"></div>
         </div>

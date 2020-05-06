@@ -12,18 +12,19 @@ get_header();
 
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main">
+			<div class="container">
 
-		<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'charis-2020' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
+				<header class="container page-header">
+					<h1 class="title is-1 page-title">
+						<?php
+						/* translators: %s: search query. */
+						printf( esc_html__( 'Search Results for: %s', 'charis-2020' ), '<span>' . get_search_query() . '</span>' );
+						?>
+					</h1>
+				</header><!-- .page-header -->
+				<div class="search-results-wrap">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -46,7 +47,8 @@ get_header();
 
 		endif;
 		?>
-
+				</div>
+			</div>
 		</main><!-- #main -->
 	</section><!-- #primary -->
 

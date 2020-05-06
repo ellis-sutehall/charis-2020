@@ -1,13 +1,15 @@
 @import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
-$navbar-breakpoint: $tablet;
+
+@import './variables';
 
 @import "../../node_modules/bulma/bulma.sass";
 
-@import './variables';
 @import './mixins';
 @import './scss/fontawesome.scss';
 @import './scss/solid.scss';
 @import './wcfonts';
+@import './typography';
+@import './buttons';
 @import './header';
 @import './breadcrumb';
 @import './home';
@@ -19,21 +21,11 @@ $navbar-breakpoint: $tablet;
 @import './basket';
 @import './checkout';
 @import './my_account';
+@import './search-results';
 @import './footer';
 @import './pagination';
 @import './star_rating';
 
-.title {
-  font-weight: lighter;
-}
-
-.is-1, .is-2, .is-3 {
-  font-weight: lighter;
-}
-
-p {
-  margin-bottom: $size-6;
-}
 
 .site-content {
   margin-top: $header-height;

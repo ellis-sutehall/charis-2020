@@ -289,7 +289,7 @@
                         transition: all .5s;
 
                         @include from($tablet) {
-                            color: black;
+                            color: $secondary;
                         }
                         
                         &:hover {
@@ -307,20 +307,23 @@
                                 @include from($tablet) {
                                     left: 0;
                                 }
+                                // &::after {
+                                //     display: block;
+                                // }
                             }
                         }
-                        &::after {
-                            @include from($tablet) {
-                                content: "";
-                                display: block;
-                                position: absolute;
-                                left: 0;
-                                top: 0;
-                                width: 200px;
-                                height: 250px;
-                                z-index: -10;
-                            }
-                        }
+                        // &::after {
+                        //     @include from($tablet) {
+                        //         content: "";
+                        //         display: none;
+                        //         position: absolute;
+                        //         left: 0;
+                        //         top: 0;
+                        //         width: 200px;
+                        //         height: 250px;
+                        //         z-index: -10;
+                        //     }
+                        // }
                         & > a {
                             &::after {
                                 @extend %fa-icon;
@@ -341,21 +344,37 @@
                     }
                     .sub-menu {
                         padding-left: 1rem;
+                        padding-top: 0;
                         @include from($tablet) {
+                            padding-top: 2rem;
                             position: absolute;
                             width: 170px;
-                            top: 44px;
-                            background-color: aliceblue;
+                            top: 25px;
                             left: -999rem;
                             padding-left: 0;
                         }
                         &:hover {
                             left: 0;
                         }
+                        
                         li {
                             @include from($tablet) {
+                                background-color: $primary;
                                 text-align: left;
                                 padding: 10px 15px;
+                            }
+                            &:first-child {
+                                position: relative;
+                                &::before {
+                                    @extend %fa-icon;
+                                    @extend .fas;
+                                    content: fa-content($fa-var-caret-up);
+                                    position: absolute;
+                                    top: -20px;
+                                    left: 15px;
+                                    font-size: 2rem;
+                                    color: $primary;
+                                }
                             }
                         }
                     }

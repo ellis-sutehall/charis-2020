@@ -28,13 +28,40 @@
 		}
 	?>
 
+	<?php
+		$cta_desc = '';
+		switch ($product_cat_name) {
+			case 'Bangles':
+				$cta_desc = 'Handmade Sterling Silver Bangles. Various Styles And Shapes To Suit everyone';
+				break;
+
+			case 'Earrings':
+				$cta_desc = 'Handmade Sterling Silver Earrings. Various styles and designs to suit every occasion';
+				break;
+
+			case 'Rings':
+				$cta_desc = 'Handmade Sterling Silver Rings. View the range of with or without precious stones';
+				break;
+
+			case 'Necklaces':
+				$cta_desc = 'Handmade Sterling Silver Necklaces and pendants. I have different designs from small pendants to linked necklaces. I even have matching necklace and earrings pairs';
+				break;
+			
+			default:
+				$cta_desc = '';
+				break;
+		}
+	?>
+
 		<section class="cta content-right <?php echo strtolower($product_cat_name); ?>">
 			<div class="container">
 				<div class="columns">
-					<div class="column is-one-third <?php if($product_cat_name == 'Bangles' || $product_cat_name == 'Necklaces' || $product_cat_name == 'Rings') echo 'is-offset-8'; ?>">
+					<div class="column is-one-third <?php if($product_cat_name != 'Earrings') echo 'is-offset-8'; ?>">
 						<h2 class="title is-2">View all <?php echo strtolower($product_cat_name); ?></h2>
-						<h4 class="title is-4">Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor </h4>
-						<a href="/shop/category/<?php echo strtolower($product_cat_name); ?>" class="button is-link is-primary is-outlined">Shop Now</a>
+						<?php if($cta_desc != ''): ?>
+							<h4 class="title is-4"><?php echo $cta_desc; ?></h4>
+						<?php endif; ?>
+						<a href="/shop/category/<?php echo strtolower($product_cat_name); ?>" class="button is-primary">Shop Now</a>
 					</div>
 					<div class="column is-hidden-tablet is-hidden-desktop"></div>
 				</div>
@@ -84,7 +111,7 @@
 								</div>
 								<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ef65ce703436d18164d591079_3ea1d4ac85" tabindex="-1" value=""></div>
-								<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+								<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button is-secondary"></div>
 							</div>
 						</form>
 					</div>

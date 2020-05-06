@@ -207,9 +207,15 @@ add_action( 'widgets_init', 'charis_2020_widgets_init' );
  * Enqueue scripts and styles.
  */
 function charis_2020_scripts() {
+	
 	wp_enqueue_style( 'charis-2020-style', get_stylesheet_uri(), array(), _S_VERSION );
+	
 	wp_style_add_data( 'charis-2020-style', 'rtl', 'replace' );
+	
+	wp_enqueue_style( 'charis-2020-google-fonts-bs', 'https://fonts.googleapis.com/css2?family=Bad+Script&display=swap' );
+	wp_enqueue_style( 'charis-2020-google-fonts-lato', 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&display=swap' );
 
+	
 	wp_enqueue_style( 'charis-2020-style-app', get_template_directory_uri() . '/dist/css/app.css', array(), _S_VERSION );
 
 	wp_enqueue_script( 'charis-2020-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
@@ -217,7 +223,6 @@ function charis_2020_scripts() {
 	wp_enqueue_script( 'charis-2020-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), _S_VERSION, true );
 
 	wp_enqueue_script( 'charis-2020-app', get_template_directory_uri() . '/src/js/app.js', array(), _S_VERSION, true );
-
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

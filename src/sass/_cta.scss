@@ -2,10 +2,25 @@
     display: flex;
     align-items: center;
 
-    h2, h4 {
+    
+    .title {
         
         @include from($tablet) {
-            color: white!important;
+            color: white;
+        }
+
+        &.is-2 {
+            @include from($tablet) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        &.is-4 {
+            @include from($tablet) {
+                margin-bottom: 2rem;
+                font-size: 1.3rem;
+                font-style: italic;
+            }
         }
 
     }
@@ -56,7 +71,7 @@
     &.bangles {
         
         @include from($tablet) {
-            background-image: url('../img/cta-bg-bangles-2.jpg');
+            background-image: url('../img/cta-bg-bangles-3.jpg');
         }
 
         .columns {
@@ -73,7 +88,7 @@
     &.earrings {
         
         @include from($tablet) {
-            background-image: url('../img/cta-bg-earrings.jpg');
+            background-image: url('../img/cta-bg-earrings-01.jpg');
         }
 
         .columns {
@@ -91,7 +106,7 @@
     &.necklaces {
         
         @include from($tablet) {
-            background-image: url('../img/cta-bg-necklaces.jpg');
+            background-image: url('../img/cta-bg-necklaces-01.jpg');
         }
 
         .columns {
@@ -109,7 +124,7 @@
     &.rings {
         
         @include from($tablet) {
-            background-image: url('../img/cta-bg-rings.jpg');
+            background-image: url('../img/cta-bg-rings-dt.jpg');
         }
 
         .columns {
