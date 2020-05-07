@@ -27,7 +27,26 @@
         padding-bottom: $size-1 * 2;
     }
 
+    a, p, span {
+        color: $primary;
+    }
+
+    a {
+        &:hover {
+            color: darken($primary, 20%);
+        }
+    }
+
+    li, p {
+        line-height: 2rem;
+    }
+
     .footer-widgets {
+
+        .widget-title {
+            display: none;
+        }
+
         .widget_recent_reviews {
             .product_list_widget {
                 list-style: none outside;

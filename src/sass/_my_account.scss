@@ -1,9 +1,9 @@
 .woocommerce-account {
     h1 {
-        width: 66.66666%;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        // width: 66.66666%;
+        // margin-left: auto;
+        // margin-right: auto;
+        // text-align: center;
         padding-top: $size-1;
     }
 
@@ -18,7 +18,7 @@
             @extend %fa-icon;
             @extend .fas;
             display: block;
-            color: lightgray;
+            color: $primary;
         }
     }
 
@@ -40,6 +40,7 @@
         .menu-list {
             li {
                 a {
+                    color: $secondary;
                     font-size: 1.5rem;
                     &::before {
                         @extend %fa-icon;
@@ -50,10 +51,12 @@
                     }
                 }
 
-                &.is-active {
-                    background: $blue;
+                &.is-active, &:hover {
+                    background-color: $primary;
                     a {
-                        color: white;
+                        background-color: $primary;
+                        color: $secondary;
+                        opacity: 1;
                     }
                 }
 
@@ -117,7 +120,7 @@
         }
         tr {
             &:nth-child(even) {
-                background: lightgray;
+                background: $primary;
             }
         }
     }

@@ -107,7 +107,7 @@ if ( post_password_required() ) {
 			'fields' => apply_filters( 'comment_form_default_fields', $fields ),
 			'comment_field' => '<div class="field"><textarea id="comment" class="textarea" name="comment" placeholder="Enter your review here" aria-required="true"></textarea></div>',
 			'label_submit' => 'Submit Review',
-			'class_submit' => 'button',
+			'class_submit' => 'button is-secondary',
 			'title_reply_before' => '<h3 class="title is-3 has-text-centered comment-reply-title">',
 			'title_reply_after' => '</h3>',
 			'title_reply'       => __( 'Leave a Review' ),

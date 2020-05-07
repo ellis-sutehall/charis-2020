@@ -10,6 +10,7 @@
 @import './wcfonts';
 @import './typography';
 @import './buttons';
+@import './forms';
 @import './header';
 @import './breadcrumb';
 @import './home';
@@ -31,7 +32,7 @@
   margin-top: $header-height;
 
   @include from($tablet) {
-    margin-top: $header-height-lrg;
+    margin-top: calc(#{$header-height-lrg} + 5px);
   }
 
 }
@@ -51,7 +52,7 @@
   
 }
 
-section:not(.hero, .sign-up, .widget-filters, .search-wrap, .cta, .latest-products, .map) {
+section:not(.hero, .sign-up, .widget-filters, .search-wrap, .cta, .latest-products, .map, .comments) {
   margin-bottom: $size-1;
 
   @include from($tablet) {

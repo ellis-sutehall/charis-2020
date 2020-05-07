@@ -17,9 +17,9 @@ get_header();
             </div>
         </div>
     </div>
-    <a href="#latest" class="jump-down button">
+    <button class="jump-down button is-secondary">
         <span class="icon is-large"><i class="fa fa-arrow-down"></i></span>
-    </a>
+    </button>
 </section>
 
 <section id="latest" class="latest-products">
@@ -169,6 +169,12 @@ get_header();
             ?>
             
         </div>
+    </div>
+</section>
+
+<section class="instagram">
+    <div class="container">
+        <?php echo do_shortcode('[instagram-feed]'); ?>
     </div>
 </section>
 

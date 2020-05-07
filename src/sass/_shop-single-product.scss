@@ -122,6 +122,13 @@
         @include from($tablet) {
             margin-top: $size-1 * 2;
         }
+
+        .title.is-2 {
+            @include from($tablet) {
+                margin-bottom: 0;
+            }
+        }
+
         .container {
             @include mobile {
                 padding-top: $size-4;
@@ -177,6 +184,16 @@
             //     top: 0;
             //     left: -10px;
             // }
+        }
+    }
+
+    .comments {
+        background: $primary;
+        p {
+            color: $secondary;
+        }
+        .icons {
+            color: $primary;
         }
     }
 

@@ -1,0 +1,8 @@
+form {
+    .input, .select select, .textarea {
+        border-color: $primary;
+    }
+    .control.has-icons-left .icon, .control.has-icons-right .icon {
+        color: $primary;
+    }
+}

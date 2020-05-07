@@ -53,6 +53,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchPopUp();
 
+    // Homepage jump down button
+    // Seeing as Wordpress already loaded jQuery we may as well use it...
+    jQuery('.jump-down').click(() => {
+        jQuery('html, body').animate({
+            scrollTop: jQuery('#latest').offset().top - 80}, 500);
+    });
+
     // Remove next/previous arrows from pagination
     function removeArrows() {
 

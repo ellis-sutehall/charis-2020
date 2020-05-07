@@ -311,7 +311,7 @@ function woocommerce_breadcrumbs_custom() {
 }
 add_filter( 'woocommerce_breadcrumb_defaults', 'woocommerce_breadcrumbs_custom' );
 
-
+// Reviews form
 function custom_format_comment_listing($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">

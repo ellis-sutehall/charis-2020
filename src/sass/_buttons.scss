@@ -1,10 +1,13 @@
 .button {
     letter-spacing: 1px;
+    
     &.is-primary {
         color: $secondary;
     }
+    
     &.is-secondary {
         background: $secondary;
         color: $primary;
     }
+    
 }

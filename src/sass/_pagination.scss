@@ -10,8 +10,8 @@
                 width: 20px;
                 height: 20px;
                 padding: 10px 15px;
-                &.current {
-                    background: aliceblue;
+                &.current, &:hover {
+                    background: $primary;
                 }
                 &.prev, &.next {
                     position: relative;

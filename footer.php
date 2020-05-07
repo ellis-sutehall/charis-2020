@@ -97,14 +97,14 @@
 										</span>
 									</div>
 								</div>
-								<div class="field mc-field-group">
+								<!-- <div class="field mc-field-group">
 									<div class="control has-icons-left">
 										<input class="input" type="text" value="" name="LNAME" class="" id="mce-LNAME" placeholder="Last Name">
 										<span class="icon is-small is-left">
 											<i class="fas fa-user"></i>
 										</span>
 									</div>
-								</div>
+								</div> -->
 								<div id="mce-responses" class="clear">
 									<div class="response" id="mce-error-response" style="display:none"></div>
 									<div class="response" id="mce-success-response" style="display:none"></div>

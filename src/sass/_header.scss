@@ -293,7 +293,8 @@
                         }
                         
                         &:hover {
-                            color: #333333;
+                            // color: darken($primary, 20%);
+                            opacity: .7;
                         }
                     }
                     .scrolled & {
@@ -307,23 +308,8 @@
                                 @include from($tablet) {
                                     left: 0;
                                 }
-                                // &::after {
-                                //     display: block;
-                                // }
                             }
                         }
-                        // &::after {
-                        //     @include from($tablet) {
-                        //         content: "";
-                        //         display: none;
-                        //         position: absolute;
-                        //         left: 0;
-                        //         top: 0;
-                        //         width: 200px;
-                        //         height: 250px;
-                        //         z-index: -10;
-                        //     }
-                        // }
                         & > a {
                             &::after {
                                 @extend %fa-icon;

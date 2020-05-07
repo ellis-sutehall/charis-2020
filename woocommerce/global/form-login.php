@@ -64,7 +64,7 @@ if ( is_user_logged_in() ) {
 	</div>
 	
 	<div class="field">
-		<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?></button>
+		<button type="submit" class="is-secondary woocommerce-button button woocommerce-form-login__submit" name="login" value="<?php esc_attr_e( 'Login', 'woocommerce' ); ?>"><?php esc_html_e( 'Login', 'woocommerce' ); ?></button>
 	</div>
 	
 	<p class="lost_password">
