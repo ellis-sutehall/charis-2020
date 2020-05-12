@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
 
+    @include mobile {
+        margin-bottom: $size-1;
+    }
     
     .title {
         
@@ -10,6 +13,8 @@
         }
 
         &.is-2 {
+            margin-top: $size-4;
+            
             @include from($tablet) {
                 margin-bottom: 1rem;
             }
@@ -34,9 +39,10 @@
     }
 
     .container {
-        @include mobile {
-            padding-bottom: 0;
-        }
+        padding: 0;
+        // @include mobile {
+        //     padding-bottom: 0;
+        // }
     }
 
     .columns {
@@ -50,6 +56,10 @@
             
             @include mobile {
                 // min-height: 50vh;
+            }
+
+            &.is-one-third {
+                padding: 0 2rem;
             }
 
             &.is-hidden-desktop {

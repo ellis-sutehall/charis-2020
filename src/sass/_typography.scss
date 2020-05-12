@@ -1,9 +1,10 @@
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
+  color: $secondary;
 } 
 
-.shop-landing-wrap, .single-product {
+.shop-landing-wrap, .single-product, .search-results {
   .product {
     .title.is-5 {
       font-family: 'Lato', sans-serif;
@@ -23,14 +24,14 @@ body {
 
 h1, h2, h3 {
   &.title {
-    font-family: 'Bad Script', cursive;
+    font-family: 'Bad Script', sans-serif;
     color: $secondary;
     font-weight: lighter;
   }
 }
 
 
-h4.title {
+h4.title, .title.is-4 {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
@@ -39,7 +40,7 @@ h4.title {
   // font-weight: lighter;
 }
 
-a {
+a:not(.button) {
   color: $secondary;
   transition: all .5s;
   &:hover {

@@ -387,6 +387,13 @@ function change_loop_ratings_location(){
 add_action('woocommerce_after_shop_loop_item_title','change_loop_ratings_location', 2 );
 
 
+// Add class to proceed to checkout button
+function woocommerce_button_proceed_to_checkout() {
+	$checkout_url = wc_get_checkout_url();
+	?>
+	<a href="<?php echo $checkout_url; ?>" class="is-secondary checkout-button button alt wc-forward"><?php _e( 'Proceed to checkout', 'woocommerce' ); ?></a>
+	<?php
+}
 
 
 if ( ! function_exists( 'woocommerce_form_field' ) ) {
@@ -645,7 +652,7 @@ function custom_product_searchform( $form ) {
 					</div>
 
 				<div class="control">
-					<button class="button" type="submit" id="searchsubmit" />Search</button>
+					<button class="button is-secondary" type="submit" id="searchsubmit" />Search</button>
 				</div>
 			</div>
 

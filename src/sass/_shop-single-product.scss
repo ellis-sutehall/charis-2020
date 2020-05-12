@@ -105,6 +105,7 @@
         }
         .price {
             font-size: $size-6;
+            font-weight: 400;
             .amount {
                 font-size: $size-4;
             }
@@ -114,6 +115,34 @@
         }
         .stock {
             font-weight: bold;
+        }
+    }
+
+    .product_meta {
+        display: flex;
+        flex-direction: column;
+        span {
+            font-weight: 400;
+            margin-bottom: $size-6;
+            a {
+                font-weight: 300;
+            }
+        }
+    }
+
+    .up-sells {
+        .container {
+            
+            @include mobile {
+                padding-top: $size-4;
+            }
+
+            padding-bottom: 0;
+            .products {
+                .product {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 

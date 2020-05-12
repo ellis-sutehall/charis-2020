@@ -10,8 +10,8 @@ get_header();
         <div class="container">
             <div class="columns">
                 <div class="column is-one-third is-offset-8">
-                    <h1 class="title is-2">Charis Sutehall Jewellery</h1>
-                    <h4 class="title is-4">Bespoke sterling silver jewellery <br>handmade in Cambridge</h4>
+                    <h1 class="title is-2">Handcrafted silver jewellery</h1>
+                    <h4 class="title is-4">Bespoke sterling silver jewellery <br>Handmade in Cambridge</h4>
                     <a href="/shop" class="button is-primary">Shop Now</a>
                 </div>
             </div>
@@ -123,7 +123,7 @@ get_header();
     <div class="container">
         <div class="columns">
             <div class="column is-one-third is-offset-8">
-                <h2 class="title is-2">View all Bangles</h2>
+                <h2 class="title is-2">View all bangles</h2>
                 <h4 class="title is-4">Handmade sterling silver bangles. <br> Various styles and shapes to suit everyone.</h4>
                 <a href="/shop/category/bangles" class="button is-primary ">View Bangles</a>
             </div>

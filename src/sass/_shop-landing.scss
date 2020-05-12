@@ -46,11 +46,14 @@
             .ui-slider-handle {
                 top: -7px;
                 background-color: white;
-                border: 2px solid $primary;
+                border: 2px solid $secondary;
                 transition: background-color .5s;
                 &:hover {
-                    background-color: $primary;
+                    background-color: $secondary;
                 }
+            }
+            .ui-slider-range {
+                background-color: $secondary;
             }
         }
     }
@@ -78,9 +81,7 @@
     .container {
         padding: 0;
     }
-}
-.woocommerce-page {
-    .entry-content {
+    &.entry-content {
         margin-top: $size-4;
         p {
             @include from($tablet) {
@@ -88,6 +89,8 @@
             }
         }
     }
+}
+.woocommerce-page {
     
     &.woocommerce {
         .woocommerce-result-count {

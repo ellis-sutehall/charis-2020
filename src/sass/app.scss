@@ -19,6 +19,7 @@
 @import './shop-single-product';
 @import './about';
 @import './contact';
+@import './commissions';
 @import './basket';
 @import './checkout';
 @import './my_account';
@@ -29,9 +30,9 @@
 
 
 .site-content {
-  margin-top: $header-height;
+  margin-top: calc(#{$header-height} + 6px) ;
 
-  @include from($tablet) {
+  @include from($desktop) {
     margin-top: calc(#{$header-height-lrg} + 5px);
   }
 
@@ -44,7 +45,8 @@
 }
 
 .container {
-  padding: 0 $size-6;
+  padding-left: $size-6;
+  padding-right: $size-6;
   
   @include from($desktop) {
     padding: 0;
@@ -52,25 +54,44 @@
   
 }
 
-section:not(.hero, .sign-up, .widget-filters, .search-wrap, .cta, .latest-products, .map, .comments) {
-  margin-bottom: $size-1;
-
-  @include from($tablet) {
-    margin-bottom: $size-1;
-  }
-
+section {
+  
+  padding-bottom: $size-1;
+  
   .container {
-    padding-top: $size-1;
-    padding-bottom: $size-1;
-    
-    @include from($tablet) {
-        padding-top: $size-1;
-        padding-bottom: $size-1;
-    }
-    
+    padding-top: $size-4;
+  }
+  
+  .home & {
+    margin-bottom: $size-6;
+  }
+  
+  &.sign-up {
+    margin-bottom: 0;
   }
   
 }
+
+
+// section:not(.hero, .sign-up, .widget-filters, .search-wrap, .cta, .latest-products, .map, .comments, .featured, .commissions) {
+//   margin-bottom: $size-1;
+
+//   @include from($tablet) {
+//     margin-bottom: $size-1;
+//   }
+
+//   .container {
+//     padding-top: $size-1;
+//     padding-bottom: $size-1;
+    
+//     @include from($desktop) {
+//         padding-top: $size-1;
+//         padding-bottom: $size-1;
+//     }
+    
+//   }
+  
+// }
 
 .grecaptcha-badge {
   display: none;

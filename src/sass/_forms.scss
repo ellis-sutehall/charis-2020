@@ -5,4 +5,13 @@ form {
     .control.has-icons-left .icon, .control.has-icons-right .icon {
         color: $primary;
     }
+    
+}
+
+.select:not(.is-multiple):not(.is-loading):after {
+    border-color: $secondary;
+}
+
+.input:active, .input:focus, .is-active.input, .is-active.textarea, .is-focused.input, .is-focused.textarea, .select select.is-active, .select select.is-focused, .select select:active, .select select:focus, .textarea:active, .textarea:focus {
+    border-color: $secondary;
 }

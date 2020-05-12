@@ -87,7 +87,7 @@
 			</div>
 			
 			<nav id="site-navigation" class="navbar main-navigation">
-				<div class="mobile-menu-icons show-for-mobile">
+				<div class="mobile-menu-icons hide-for-desktop">
 					<a class="search-icon" href="#" title="Search">
 						<span class="icon is-small"><i class="fas fa-search" aria-hidden-true></i></span>
 					</a>

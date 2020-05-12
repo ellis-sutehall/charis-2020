@@ -8,20 +8,24 @@
         }
     }
 
-    .columns {
-        display: flex;
-        flex-direction: column;
-        
-        @include from($tablet) {
-            flex-direction: row;
-        }
+    section.contact {
 
-        .column {
-            &:nth-child(2) {
-                @include mobile {
-                    order: -1;
+        .columns {
+            display: flex;
+            flex-direction: column;
+            
+            @include from($tablet) {
+                flex-direction: row;
+            }
+
+            .column {
+                &:nth-child(2) {
+                    @include mobile {
+                        order: -1;
+                    }
                 }
             }
+
         }
 
     }

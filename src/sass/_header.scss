@@ -1,11 +1,11 @@
 // Search Widget
 .search-wrap {
-    background: black;
+    background: $primary;
     transition: all .3s;
     height: $search-height;
     margin-top: -$search-height;
     
-    @include from($tablet) {
+    @include from($desktop) {
         height: $search-height-lrg;
         margin-top: -$search-height-lrg;
     }
@@ -15,7 +15,7 @@
     }
     .container {
         padding: $size-6 / 2;
-        @include from($tablet) {
+        @include from($desktop) {
             padding: $size-4 0;
         }
 
@@ -40,22 +40,22 @@
     background: white;
     z-index: 30;
     transition: all .3s;
-    @include from($tablet) {
+    @include from($desktop) {
         height: $header-height-lrg;
         .admin-bar & {
             margin-top: 32px;
         }
     }
     .scrolled & {
-        border-bottom: 1px solid black;
-        @include from($tablet) {
+        border-bottom: 1px solid $secondary;
+        @include from($desktop) {
             height: 80px;
         }
     }
     .search-is-open & {
         top: $search-height;
         
-        @include from($tablet) {
+        @include from($desktop) {
             top: $search-height-lrg;
         }
 
@@ -80,7 +80,7 @@
         .icons-left, .icons-right {
             min-width: 35px;
             
-            @include from($tablet) {
+            @include from($desktop) {
                 width: 86px;
             }
 
@@ -89,7 +89,7 @@
         .icons-right {
             position: relative;
             order: -1;
-            @include from($tablet) {
+            @include from($desktop) {
                 position: initial;
                 order: initial;
             }
@@ -97,7 +97,7 @@
                 padding-right: .5rem;
                 display: none;
                 
-                @include from($tablet) {
+                @include from($desktop) {
                     padding-right: $size-4;
                     display: inline-block;
                 }
@@ -116,11 +116,10 @@
                 left: -3px;
                 font-weight: bold;
                 font-size: 11px;
-                color: $red;
+                color: $secondary;
                 position: relative;
 
-                @include from($tablet) {
-                    color: black;
+                @include from($desktop) {
                     position: initial;
                     top: auto;
                     left: auto;
@@ -129,7 +128,7 @@
             }
         }
         .scrolled & {
-            @include from($tablet) {
+            @include from($desktop) {
                 padding-bottom: .4rem;
             }
         }
@@ -137,14 +136,14 @@
             position: relative;
             order: 1;
             
-            @include from($tablet) {
+            @include from($desktop) {
                 order: initial;
             }
 
             .search-icon {
                 display: none;
                 
-                @include from($tablet) {
+                @include from($desktop) {
                     display: block;
                 }
 
@@ -174,15 +173,15 @@
                 text-indent: -1000000px;
                 // Get exact sizes
                 width: 150px;
-                height: 20px;
+                height: 22px;
                 display: block;
                 transition: all .5s;
-                @include from($tablet) {
+                @include from($desktop) {
                     width: 240px;
                     height: 35px;
                 }
                 .scrolled & {
-                    @include from($tablet) {
+                    @include from($desktop) {
                         width: 137px;
                         height: 20px;
                     }
@@ -201,15 +200,14 @@
     }
     
     .navbar {
-        background: black;
+        background: $primary;
         position: initial;
         border-top: 1px solid white;
         position: fixed;
         width: 75%;
         right: -100%;
-        // right: 0;
         transition: right .5s;
-        @include from($tablet) {
+        @include from($desktop) {
             position: relative;
             right: auto;
             border-top: 0;
@@ -221,7 +219,7 @@
         }
         
         .scrolled & {
-            @include from($tablet) {
+            @include from($desktop) {
                 min-height: 0;
             }
         }
@@ -232,10 +230,10 @@
             padding-left: $size-6;
             padding-right: $size-6;
             a {
-                color: white;
+                color: $secondary;
             }
 
-            @include from($tablet) {
+            @include from($desktop) {
                 display: none;
             }
 
@@ -259,8 +257,8 @@
             text-align: left;
             width: 100%;
             height: 100vh;
-            background: black;
-            @include from($tablet) {
+            background: $primary;
+            @include from($desktop) {
                 height: auto;
                 background: 0;
                 text-align: center;
@@ -268,9 +266,9 @@
             .navbar-menu {
                 display: block;
                 box-shadow: none;
-                background: black;
+                background: $primary;
                 padding-left: 1rem;
-                @include from($tablet) {
+                @include from($desktop) {
                     display: inline-flex;
                     background: 0;
                     padding-left: 0;
@@ -280,17 +278,18 @@
                     padding: 1rem 0 0 0;
                     position: relative;
 
-                    @include from($tablet) {
+                    @include from($desktop) {
                         padding: .8rem 2rem 0 0;
                     }
 
                     a {
-                        color: white;
+                        // color: white;
+                        color: $secondary;
                         transition: all .5s;
 
-                        @include from($tablet) {
-                            color: $secondary;
-                        }
+                        // @include from($tablet) {
+                        //     color: $secondary;
+                        // }
                         
                         &:hover {
                             // color: darken($primary, 20%);
@@ -298,14 +297,14 @@
                         }
                     }
                     .scrolled & {
-                        @include from($tablet) {
+                        @include from($desktop) {
                             padding-top: 0;
                         }
                     }
                     &.menu-item-has-children {
                         &:hover {
                             .sub-menu {
-                                @include from($tablet) {
+                                @include from($desktop) {
                                     left: 0;
                                 }
                             }
@@ -320,7 +319,7 @@
                                 top: 21px;
                                 font-size: .8rem;
                                 .scrolled & {
-                                    @include from($tablet) {
+                                    @include from($desktop) {
                                         top: 9px;
                                     }
                                 }
@@ -331,7 +330,7 @@
                     .sub-menu {
                         padding-left: 1rem;
                         padding-top: 0;
-                        @include from($tablet) {
+                        @include from($desktop) {
                             padding-top: 2rem;
                             position: absolute;
                             width: 170px;
@@ -344,7 +343,7 @@
                         }
                         
                         li {
-                            @include from($tablet) {
+                            @include from($desktop) {
                                 background-color: $primary;
                                 text-align: left;
                                 padding: 10px 15px;
@@ -360,6 +359,10 @@
                                     left: 15px;
                                     font-size: 2rem;
                                     color: $primary;
+                                    display: none;
+                                    @include from($desktop) {
+                                        display: block;
+                                    }
                                 }
                             }
                         }

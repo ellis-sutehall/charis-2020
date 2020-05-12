@@ -8,7 +8,7 @@ get_header();
 <section class="intro">
 </section>
 
-<section>
+<section class="about">
     <div class="container">
         <h1 class="title is-1">About</h1>
         <div class="columns is-vcentered">
