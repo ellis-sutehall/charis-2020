@@ -124,6 +124,8 @@
                         @include from($tablet) {
                             margin-left: 10px;
                             display: block;
+                            float: right;
+                            max-width: 100%!important;
                         }
                         &:last-child {
                             @include from($tablet) {
