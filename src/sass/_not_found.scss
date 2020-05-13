@@ -1,0 +1,10 @@
+.not-found {
+    h1 {
+        margin-bottom: $size-4;
+        
+        @include from($tablet) {
+            margin-bottom: $size-1;
+        }
+        
+    }
+}
