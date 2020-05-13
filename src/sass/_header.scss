@@ -38,7 +38,7 @@
     right: 0;
     top: 0;
     background: white;
-    z-index: 30;
+    z-index: 1000;
     transition: all .3s;
     @include from($desktop) {
         height: $header-height-lrg;

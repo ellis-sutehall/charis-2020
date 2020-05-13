@@ -73,26 +73,6 @@ section {
 }
 
 
-// section:not(.hero, .sign-up, .widget-filters, .search-wrap, .cta, .latest-products, .map, .comments, .featured, .commissions) {
-//   margin-bottom: $size-1;
-
-//   @include from($tablet) {
-//     margin-bottom: $size-1;
-//   }
-
-//   .container {
-//     padding-top: $size-1;
-//     padding-bottom: $size-1;
-    
-//     @include from($desktop) {
-//         padding-top: $size-1;
-//         padding-bottom: $size-1;
-//     }
-    
-//   }
-  
-// }
-
 .grecaptcha-badge {
   display: none;
 }

@@ -40,12 +40,13 @@
 
     .container {
         padding: 0;
-        // @include mobile {
-        //     padding-bottom: 0;
-        // }
+        @include from($desktop) {
+            // padding-bottom: 0;
+        }
     }
 
     .columns {
+        margin: 0;
 
         @include mobile {
             display: flex;
@@ -59,7 +60,7 @@
             }
 
             &.is-one-third {
-                padding: 0 2rem;
+                padding: 0 1rem;
             }
 
             &.is-hidden-desktop {

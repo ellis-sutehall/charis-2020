@@ -135,11 +135,14 @@
                     position: absolute;
                     width: 100%;
                     height: 40px;
-                    display: block;
                     background-color: white;
                     top: -40px;
                     left: 0;
                     z-index: 20;
+                    display: none;
+                    @include from($desktop) {
+                        display: block;
+                    }
                 }
 
                 &:hover {
@@ -197,7 +200,7 @@
                     content: fa-content($fa-var-shopping-basket);
                     text-indent: 0;
                 }
-                @include from($tablet) {
+                @include from($desktop) {
                     display: flex;
                     justify-content: space-between;
                     width: 100%;

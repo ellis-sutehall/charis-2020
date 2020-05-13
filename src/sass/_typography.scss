@@ -4,6 +4,19 @@ body {
   color: $secondary;
 } 
 
+.title {
+  &.is-1 {
+    @include mobile {
+      font-size: 2.5rem;
+    }
+  }
+  &.is-2 {
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+}
+
 .shop-landing-wrap, .single-product, .search-results {
   .product {
     .title.is-5 {

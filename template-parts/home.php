@@ -132,6 +132,7 @@ get_header();
     </div>
 </section>
 
+<?php // Update this to be more dynamic, ACF? ?>
 <section class="collection">
     <div class="container has-text-centered">
         <h2 class="title is-2">The Summer Collection</h2>
@@ -143,7 +144,7 @@ get_header();
                     'posts_per_page' => 3,
                     'orderby' => 'date',
                     'order' => 'desc',
-                    'product_tag' => 'collection',
+                    'product_tag' => 'summer',
                     );
                 $loop = new WP_Query( $args );
                 if ( $loop->have_posts() ) {

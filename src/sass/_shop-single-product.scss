@@ -153,8 +153,12 @@
         }
 
         .title.is-2 {
+            position: relative;
+            z-index: 100;
+            margin-bottom: 0;
+
             @include from($tablet) {
-                margin-bottom: 0;
+                margin-bottom: $size-6;
             }
         }
 
@@ -189,6 +193,22 @@
     }
 
     .comments {
+        background: $primary;
+
+        .container {
+            padding-top: $size-4;
+            @include from($tablet) {
+                padding-top: $size-1;
+            }
+        }
+        
+        p {
+            color: $secondary;
+        }
+        .icons {
+            color: $primary;
+        }
+
         .comments-title {
             margin-bottom: $size-1;
         }
@@ -213,16 +233,6 @@
             //     top: 0;
             //     left: -10px;
             // }
-        }
-    }
-
-    .comments {
-        background: $primary;
-        p {
-            color: $secondary;
-        }
-        .icons {
-            color: $primary;
         }
     }
 
