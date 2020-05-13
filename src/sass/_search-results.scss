@@ -1,4 +1,12 @@
 .search-results {
+
+    h1 {
+        margin-bottom: $size-4;
+        @include from($tablet) {
+            margin-bottom: $size-1;
+        }
+    }
+
     .search-results-wrap {
         display: grid;
         grid-template-columns: repeat(auto-fill, 45%);
