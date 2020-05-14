@@ -63,8 +63,21 @@
 						<?php endif; ?>
 						<a href="/shop/category/<?php echo strtolower($product_cat_name); ?>" class="button is-primary">Shop Now</a>
 					</div>
-					<div class="column is-hidden-tablet is-hidden-desktop"></div>
+					<div class="column is-hidden-tablet is-hidden-desktop">
+						<div class="credit has-text-right">
+							<p>Photo by Susan Prosser Mouzon</p>
+							<span class="icon">
+								<i class="fas fa-camera"></i>
+							</span>
+						</div>
+					</div>
 				</div>
+			</div>
+			<div class="credit dt has-text-right">
+				<p>Photo by Susan Prosser Mouzon</p>
+				<span class="icon">
+					<i class="fas fa-camera"></i>
+				</span>
 			</div>
 		</section>
 

@@ -86,4 +86,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     addSelectClass();
 
+    // Photo Credit
+    function photoCredit() {
+        let credits = document.querySelectorAll('.credit');
+        let creditArr = Array.prototype.slice.call(credits);
+        if(creditArr) {
+            
+            for(let i = 0; i < creditArr.length; i++ ) {
+                creditArr[i].addEventListener('click', function() {
+                    creditArr[i].classList.toggle('active');
+                });
+            }
+        }
+    }
+
+    photoCredit();
+
 });

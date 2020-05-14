@@ -67,8 +67,21 @@ get_header();
                 <h4 class="title is-4">Handmade sterling silver earrings. <br> Various styles and designs to suit every occasion.</h4>
                 <a href="/shop/category/earrings" class="button is-primary ">View Earrings</a>
             </div>
-            <div class="column is-hidden-tablet is-hidden-desktop"></div>
+            <div class="column is-hidden-tablet is-hidden-desktop">
+                <div class="credit has-text-right">
+                    <p>Photo by Susan Prosser Mouzon</p>
+                    <span class="icon">
+                        <i class="fas fa-camera"></i>
+                    </span>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="credit dt has-text-right">
+        <p>Photo by Susan Prosser Mouzon</p>
+        <span class="icon">
+            <i class="fas fa-camera"></i>
+        </span>
     </div>
 </section>
 
@@ -127,8 +140,21 @@ get_header();
                 <h4 class="title is-4">Handmade sterling silver bangles. <br> Various styles and shapes to suit everyone.</h4>
                 <a href="/shop/category/bangles" class="button is-primary ">View Bangles</a>
             </div>
-            <div class="column is-hidden-tablet is-hidden-desktop"></div>
+            <div class="column is-hidden-tablet is-hidden-desktop">
+                <div class="credit has-text-right">
+                    <p>Photo by Susan Prosser Mouzon</p>
+                    <span class="icon">
+                        <i class="fas fa-camera"></i>
+                    </span>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="credit dt has-text-right">
+        <p>Photo by Susan Prosser Mouzon</p>
+        <span class="icon">
+            <i class="fas fa-camera"></i>
+        </span>
     </div>
 </section>
 

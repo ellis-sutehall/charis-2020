@@ -1,11 +1,54 @@
 .cta {
     display: flex;
     align-items: center;
+    position: relative;
 
     @include mobile {
         margin-bottom: $size-1;
     }
     
+    .credit {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding: .5rem;
+        color: $secondary;
+        margin-bottom: 0;
+        padding-right: .5rem;
+        font-weight: 400;
+        bottom: 0;
+        right: 0;
+        
+        &.active {
+            background-color: $primary;
+            p {
+                display: block;
+            }
+            .icon {
+                color: $secondary;
+            }
+        }
+
+        &.dt {
+            display: none;
+            
+            @include from($tablet) {
+                display: flex;
+            }
+            
+        }
+
+        .icon {
+            color: white;
+            opacity: .8;
+        }
+        p {
+            margin-bottom: 0;
+            padding-right: .5rem;
+            display: none;
+        }
+    }
+
     .title {
         
         @include from($tablet) {
@@ -65,6 +108,8 @@
 
             &.is-hidden-desktop {
                 
+                position: relative;
+
                 @include mobile {
                     order: -1;
                     background-image: url('../img/cta-bg.jpg');
@@ -73,6 +118,8 @@
                     background-position: center;
                     min-height: 50vh;
                 }
+
+                
 
             }
         }
