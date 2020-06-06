@@ -1,8 +1,8 @@
-@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import '../../node_modules/bulma/sass/utilities/initial-variables.sass';
 
 @import './variables';
 
-@import "../../node_modules/bulma/bulma.sass";
+@import '../../node_modules/bulma/bulma.sass';
 
 @import './mixins';
 @import './scss/fontawesome.scss';
@@ -29,14 +29,12 @@
 @import './star_rating';
 @import './not_found';
 
-
 .site-content {
-  margin-top: calc(#{$header-height} + 6px) ;
+  margin-top: calc(#{$header-height} + 6px);
 
   @include from($desktop) {
     margin-top: calc(#{$header-height-lrg} + 5px);
   }
-
 }
 
 .page-template-home {
@@ -48,31 +46,27 @@
 .container {
   padding-left: $size-6;
   padding-right: $size-6;
-  
+
   @include from($desktop) {
     padding: 0;
   }
-  
 }
 
 section {
-  
   padding-bottom: $size-1;
-  
+
   .container {
     padding-top: $size-4;
   }
-  
+
   .home & {
     margin-bottom: $size-6;
   }
-  
+
   &.sign-up {
     margin-bottom: 0;
   }
-  
 }
-
 
 .grecaptcha-badge {
   display: none;
@@ -84,6 +78,26 @@ section {
 
 .show-for-mobile {
   @include from($tablet) {
-    display: none!important;
+    display: none !important;
+  }
+}
+
+// Store notice
+.woocommerce-store-notice {
+  position: fixed;
+  top: 20px;
+  padding: 10px 0;
+  z-index: 1000;
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  // height: 20px;
+  background: $secondary;
+  color: $primary;
+  a {
+    text-decoration: underline;
+    font-weight: normal;
+    cursor: pointer;
+    color: $primary;
   }
 }
