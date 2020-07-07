@@ -1,4 +1,4 @@
-console.log('Deployed with GitHub Actions');
+console.log('Deployed with GitHub Actions, take two');
 
 
 document.addEventListener('DOMContentLoaded', function() {
