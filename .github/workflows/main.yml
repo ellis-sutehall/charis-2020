@@ -22,7 +22,7 @@ jobs:
      
     - name: Sync
       env:
-        dest: 'bitnami@ip-172-26-8-183:/apps/wordpress/htdocs/wp-content/themes/charis-2020'
+        dest: 'bitnami@18.130.218.230:/apps/wordpress/htdocs/wp-content/themes/charis-2020'
       run: |
         echo "${{secrets.DEPLOY_KEY}}" > deploy_key
         chmod 600 ./deploy_key
