@@ -1,3 +1,5 @@
+console.log('Deployed with GitHub Actions');
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Add scrolled clas to body on scroll
