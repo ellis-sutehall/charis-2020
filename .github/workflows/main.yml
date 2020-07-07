@@ -19,3 +19,18 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+     
+    - name: Sync
+      env:
+        dest: 'bitnami@ip-172-26-8-183:/apps/wordpress/htdocs/wp-content/themes/charis-2020'
+      run: |
+        echo "${{secrets.DEPLOY_KEY}}" > deploy_key
+        chmod 600 ./deploy_key
+        rsync -chav --delete \
+          -e 'ssh -i ./deploy_key -o StrictHostKeyChecking=no' \
+          --exclude /deploy_key \
+          --exclude /.git/ \
+          --exclude /.github/ \
+          --exclude /node_modules/ \
+          --exclude /src/ \
+          ./ ${{env.dest}}
