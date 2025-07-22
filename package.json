@@ -21,7 +21,7 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
-    "@wordpress/scripts": "^7.2.0",
+    "@wordpress/scripts": "^30.19.0",
     "gulp-imagemin": "^2.4.0",
     "rtlcss": "^2.5.0"
   },
@@ -58,9 +58,9 @@
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^1.2.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^9.0.0"
   }
 }
